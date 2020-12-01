@@ -3,6 +3,5 @@ let months = ["january", "february","march", "april", "may", "june","july", "aug
 let run = 1
 
 for(i=0; i < months.length; i++){
-    run +=;
-    document.write(`<h3>${month[i]}</h3>`);
+    document.write(`<h3>${months[i]}</h3>`);
 };
