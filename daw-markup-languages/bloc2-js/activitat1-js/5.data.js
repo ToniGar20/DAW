@@ -19,7 +19,7 @@ function calculateFullDate () {
       let d = x.getDate();
       let mn = addOne(x.getMonth());
       let y = x.getFullYear();
-  return `Es el año ${y} y el mes ${mn}. El día es ${d} y son las ${h}:${m}:${s}`
+  return `Es el año ${y} y el mes ${mn}. Es el día ${d} y son las ${h}:${m}:${s}`
 };
 
 document.write(calculateFullDate());
