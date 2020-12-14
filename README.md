@@ -1,3 +1,3 @@
 # DAW
 
-All exercices worked in class
+Exercices and stuff done in classroom
