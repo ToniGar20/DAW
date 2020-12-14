@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+
+        <form>
+            <input type="text" id="cols" /> Columnas <br />
+            <input type="text" id="rows" /> Filas <br />
+            <input type="button" id="enviar" value="crear tabla" onclick="crear()"/>
+            <input type="button" id="limpiar" value="Limpiar" onclick="crear2()"/>
+        </form>
+        <div id="resultado"></div>
+        
+        <script>
+            function crear(){
+                var col = document.getElementById("cols").value;
+                var filas = document.getElementById("rows").value;
+                var tabla="<table border=\"0\">";
+    
+                tabla+="<tr><td></td>";
+                for(j=0;j<col;j++){ 
+                    tabla+="<td>"+(j+1)+ "</td>";
+                }
+                tabla+="</tr>";
+    
+                for(i=0;i<filas;i++){
+                    tabla+="<tr>";
+                    tabla+="<td>"+(i+1)+ "</td>";
+                    for(j=0;j<col;j++){ 
+                        tabla+="<td>"+"<input type=\"text\" size=\"1\">"+ "</td>";
+                    }
+                    tabla+="</tr>";
+                };
+            tabla+="</table>";
+            document.getElementById("resultado").innerHTML=tabla;
+            };           
+        </script>
+    </body>
+</html>
