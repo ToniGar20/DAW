@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <ul id="llista">
+        <li>Ana</li>
+        <li>Pep</li>
+        <li>Lluís</li>
+        <li>Leire</li>
+    </ul>
+    <p>Clica al botó per eliminar elements a la llista</p>
+    <button onclick="eliminar()">Fes click</button>
+    <script>
+        function eliminar() {
+           var list = document.getElementById("llista"); //Guardam a una variable el punt a partir del qual hem d'eliminar
+           list.removeChild(list.childNodes[0]); // Esborram el primer element. childNodes és una propietat que veurem a continuació
+        }
+    </script>
+</body>
+</html>
