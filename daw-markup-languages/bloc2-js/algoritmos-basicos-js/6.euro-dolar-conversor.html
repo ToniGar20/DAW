@@ -1,0 +1,49 @@
+<!--
+Covert euros to dolars & viceversa.
+Asking for the currency before
+<-->
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Conversor de euros a dólares</title>
+    </head>
+    <body>
+        <input type="text" id="dolar"><input type="button" value="Convertir de Euro a Dólar" onclick="convertir_a_dollares(document.getElementById('dolar').value)">
+        <br>
+        <input type="text" id="euro"><input type="button" value="Convertir de Dólar a Euro" onclick="convertir_a_euros(document.getElementById('euro').value)">
+        <br>
+    <div id="total">
+    </div>
+        
+
+    <script>
+
+    function convertir_a_dollares(euro){
+        numero = /[0-9]$/
+        if (!numero.exec(euro)){
+            alert("Esto no es un número");
+        } else {
+        dollar = parseFloat(1.22410);
+        resultado = dollar*parseFloat(euro);
+        document.getElementById("total").innerHTML = euro + " euros son... " + resultado.toFixed(2) + " dólares";
+        }
+    }
+
+    function convertir_a_euros(dollar) {
+        numero = /[0-9]$/
+        if (!numero.exec(dollar)){
+            alert("Esto no es un número");
+        }
+        euro = parseFloat(0.81678);
+        resultado = euro*parseFloat(dollar);
+        document.getElementById("total").innerHTML = dollar + " dólares son ... " + resultado.toFixed(2) + " euros";
+    }
+
+    </script>
+
+    </body>
+</html>
+
