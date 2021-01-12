@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>5.link-colors</title>
+
+    </head>
+    <body>
+
+        <nav>
+        <ul>
+            <li><a href="https://www.google.com/">Google</a></li>
+            <li><a href="https://www.cifpfbmoll.eu/">IES Borja Moll</a></li>
+            <li><a href="http://auditoriumpalma.com/">Auditòrium de Palma</a></li>
+            <li><a href="https://www.parcbit.es/wparcbitfront/">Parc Bit</a></li>
+        </ul>
+        </nav>
+        
+        <div>
+        <button onclick=linkColor(colorAnswered)>Cambiar color de links</button>
+        </div>
+
+        <script>
+            let colorAnswered = prompt("¿De qué color quieres los enlaces?");
+            function linkColor(colorAnswered){           
+                let listedItems = document.getElementsByTagName("a");
+                for (let i = 0; i < listedItems.length ; i++){
+                    listedItems[i].style.backgroundColor = colorAnswered;
+                }
+            }
+        </script>
+
+    </body>
+</html>
