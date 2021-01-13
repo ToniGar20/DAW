@@ -15,7 +15,10 @@ Asking for the currency before
         <br>
         <input type="text" id="euro"><input type="button" value="Convertir de Dólar a Euro" onclick="convertir_a_euros(document.getElementById('euro').value)">
         <br>
-    <div id="total">
+    <div id="total-dolars">
+    </div>
+
+    <div id="total-euros">
     </div>
         
 
@@ -28,7 +31,7 @@ Asking for the currency before
         } else {
         dollar = parseFloat(1.22410);
         resultado = dollar*parseFloat(euro);
-        document.getElementById("total").innerHTML = euro + " euros son... " + resultado.toFixed(2) + " dólares";
+        document.getElementById("total-dolars").innerHTML = euro + " euros son... " + resultado.toFixed(2) + " dólares";
         }
     }
 
@@ -39,7 +42,7 @@ Asking for the currency before
         }
         euro = parseFloat(0.81678);
         resultado = euro*parseFloat(dollar);
-        document.getElementById("total").innerHTML = dollar + " dólares son ... " + resultado.toFixed(2) + " euros";
+        document.getElementById("total-euros").innerHTML = dollar + " dólares son ... " + resultado.toFixed(2) + " euros";
     }
 
     </script>

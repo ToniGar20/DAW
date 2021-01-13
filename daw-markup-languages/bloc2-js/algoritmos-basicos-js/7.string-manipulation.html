@@ -8,12 +8,10 @@
     <head>
         <meta charset="utf-8">
         <title>Convierte un texto en muchas cosas</title>
-
     </head>
     <body>
 
         <h1>Convierte un texto en muchas cosas</h1>
-
         <section>
             <ul>
                 <li>Todo en minúsculas</li>
@@ -21,23 +19,19 @@
                 <li>Texto sin sus últimas 5 letras</li>
                 <li>Mostrar todos su elementos por separado</li>
             </ul>
-        <section>
+        </section>
 
         <section>
             <button onclick=magic()>¡Pruébalo!</button>
         </section>
 
         <section>
-            <ul id="results">
-
-            </ul>
-
+            <ul id="results"></ul>
         </section>
         
         <script>
 
-            function magic(){
-                
+            function magic(){                
                 //info saved
                 let userText = prompt("Escribe el texto para hacer magia");
                 let access = document.getElementById("results");
@@ -48,13 +42,11 @@
                 newLi1.appendChild(newLi1Text);
                 access.appendChild(newLi1);
 
-
                 //2
                 let newLi2 = document.createElement("li");
                 let newLi2Text = document.createTextNode(userText.toUpperCase());
                 newLi2.appendChild(newLi2Text);
                 access.appendChild(newLi2);
-
 
                 //division of the info for 3 and 4
                 let division = userText.split("");
@@ -81,9 +73,7 @@
                 let newLi4Text = document.createTextNode(myArray4);
                 newLi4.appendChild(newLi4Text);
                 access.appendChild(newLi4);
-
             }
-
         </script>
 
     </body>
