@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1.background-change</title>
+</head>
+<body id="click">
+    <section>
+        <button onclick=magic()>Presiona para cambiar el color del fondo</button>
+    </section>
+
+
+
+    <script>
+        function magic(ucolor){
+            ucolor = prompt("¿De qué color quieres el fondo de pantalla?");
+            document.getElementById("click").style.backgroundColor = ucolor;
+        }
+
+    </script>
+
+</body>
+</html>

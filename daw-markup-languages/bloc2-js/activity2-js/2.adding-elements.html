@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2.adding-elements</title>
+    <style>
+        footer {
+            width: 100%; height: 25%; background-color: red; color: white; font-size: 30px; text-align: center; bottom: 0; position: absolute; left:0;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Adding new elements</h1>
+    </header>
+    
+    <main>
+        <button onclick=magic()>Click para cambiar el footer</button>
+    </main>
+
+    <footer id="change">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+    </footer>
+
+    <script>
+        function magic(){
+            
+            let x = document.getElementById("change");
+            console.log(x.childNodes.nodeName);
+            x.removeChild(x.childNodes[1]);
+            
+            let newNode = document.createElement("p");
+            let newNodeText = document.createTextNode(prompt("Introduce el texto nuevo que quieras para el footer"));
+            newNode.appendChild(newNodeText)
+            x.appendChild(newNode);
+        }
+    </script>
+</body>
+</html>
