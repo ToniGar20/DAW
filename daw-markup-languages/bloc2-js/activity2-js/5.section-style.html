@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>5.section-style</title>
+    <style>
+        h1 {
+            color: rgb(182, 231, 182); border:rgb(8, 75, 2) 10px solid; text-align: center; background-color: rgb(232, 241, 214);
+        }
+        section {
+           font-size: 34pt; text-align: center; color: #313131; width: auto; height: 250px; background-color:rgb(235, 223, 223); border: rgb(0,255,157) 3px solid; 
+           }
+        .format {
+            width: 100%; height: 100px; background-color: rgb(80,185,255); text-align: center; font-size: 25pt; color: rgb(26,1,1); margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Aplicar un estilo de una clase en el CSS</h1>
+    </header>
+    
+    <section>
+        <p>Esto es una sección de la página</p>
+    </section>
+
+    <div>
+        <button onclick="magic()">Cambiar el estilo de la sección</button>
+    </div>
+    
+    <div>
+        <button onclick="nomagic()">Volver al estilo inicial</button>
+    </div>
+
+    <script>
+        function magic(){
+            document.getElementsByTagName("section")[0].classList.add("format");
+        }
+
+        function nomagic(){
+            document.getElementsByTagName("section")[0].classList.remove("format");
+        }        
+    </script>
+</body>
+</html>

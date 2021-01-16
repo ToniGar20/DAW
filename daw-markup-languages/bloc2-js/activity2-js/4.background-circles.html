@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>4.background-circles</title>
+    <style>
+        h1 {
+            color:violet; text-align: center;
+        }
+        main {
+           border: 5px solid blue; width: auto; height: 400px;  margin: 30px; 
+        }
+        img {
+            width: 150px; height: 150px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Background colours and circles</h1>
+    </header>
+    
+    <main>
+        <img src="img/cercleblau.png" onmouseenter="magic(`blue`)">
+        <img src="img/cerclemarro.png" onmouseenter="magic(`brown`)">
+        <img src="img/cercletaronja.png" onmouseenter="magic(`orange`)">
+        <img src="img/cercleverd.png"onmouseenter="magic(`green`)">
+        <img src="img/cerclevermell.png"onmouseenter="magic(`red`)">
+    </main>
+
+    <section>
+        <button onclick=white()>Pulsa para volver al fondo blanco</button>
+    </section>
+
+    <script>
+        function magic(color){
+            document.getElementsByTagName("body")[0].style.backgroundColor = color;
+        }
+
+        function white(){
+            document.getElementsByTagName("body")[0].style.backgroundColor = "white";
+        }
+    </script>
+</body>
+</html>
