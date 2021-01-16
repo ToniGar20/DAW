@@ -25,19 +25,19 @@
     </section>
 
     <div>
-        <button onclick="magic()">Cambiar el estilo de la sección</button>
+        <button onclick="magicIn()">Cambiar el estilo de la sección</button>
     </div>
     
     <div>
-        <button onclick="nomagic()">Volver al estilo inicial</button>
+        <button onclick="magicOut()">Volver al estilo inicial</button>
     </div>
 
     <script>
-        function magic(){
+        function magicIn(){
             document.getElementsByTagName("section")[0].classList.add("format");
         }
 
-        function nomagic(){
+        function magicOut(){
             document.getElementsByTagName("section")[0].classList.remove("format");
         }        
     </script>
