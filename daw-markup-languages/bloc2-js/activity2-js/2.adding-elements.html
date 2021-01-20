@@ -6,7 +6,8 @@
     <style>
         footer {
             width: 100%; height: 25%; background-color: red; color: white; font-size: 30px; text-align: center; bottom: 0; position: absolute; left:0;
-}
+        }
+        /* Footer style as the exercice requires */
     </style>
 </head>
 <body>
@@ -15,15 +16,14 @@
     </header>
     
     <main>
-        <button onclick=magic()>Click para cambiar el footer</button>
-
+        <button onclick=magic()>Click para cambiar el footer</button> <!-- Button for changing the footer paragraph calling a function-->
     </main>
 
     <footer id="change"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
             Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>       
+        </p>     
     </footer>
 
     <script>
@@ -32,6 +32,8 @@
             var item = document.getElementById("change").childNodes[0];
             item.replaceChild(newNodeText, item.childNodes[0]);
         }
+        /* Important: .childNodes method gets an array of everything in the footer, including comments or 'enters'.
+        Important to make sure that the are no empty or unnecesary elements between the parent and the children. */
     </script>
 </body>
 </html>

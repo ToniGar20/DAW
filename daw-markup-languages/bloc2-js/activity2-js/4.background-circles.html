@@ -27,10 +27,18 @@
         <img src="img/cercleverd.png"onmouseenter="magic(`green`)">
         <img src="img/cerclevermell.png"onmouseenter="magic(`red`)">
     </main>
+    <!-- 
+    The different images has a onmouseenter call that references a function which has a callack to the color.
+    The function sets a background colour to the body with this the callback parameter.
+    -->
 
     <section>
         <button onclick=white()>Pulsa para volver al fondo blanco</button>
     </section>
+    <!--
+    This is also a button to return to the default white background :)
+    Same function ut just call white onclick
+    -->
 
     <script>
         function magic(color){

@@ -7,15 +7,15 @@
 </head>
 <body id="click">
     <section>
-        <button onclick=magic()>Presiona para cambiar el color del fondo</button>
+        <button onclick=magic()>Presiona para cambiar el color del fondo</button> <!-- Button for changing the body color calling a function-->
     </section>
 
 
 
     <script>
         function magic(ucolor){
-            ucolor = prompt("¿De qué color quieres el fondo de pantalla?");
-            document.getElementById("click").style.backgroundColor = ucolor;
+            ucolor = prompt("¿De qué color quieres el fondo de pantalla?"); // Saving in a variable the color
+            document.getElementById("click").style.backgroundColor = ucolor; // Setting the color as background of the body
         }
 
     </script>

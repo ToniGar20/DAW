@@ -27,14 +27,16 @@
         <img id="foto1" src="img/foto-6-1.jpg" onmouseenter=magic() onmouseleave=nomagic()>  
     </main>
 
+    <!-- Two functions for each mouse event.-->
+
     <script>
         function magic(){
            document.getElementById("foto1").setAttribute("src","img/foto-6-2.jpg");
-        }
+        } // This function changes the src of the image to show another image on mouseEnter
         
         function nomagic(){
             document.getElementById("foto1").setAttribute("src","img/foto-6-1.jpg");
-        } 
+        } // When the mouse leaves, the first image its displayed again
     </script>
 </body>
 </html>
