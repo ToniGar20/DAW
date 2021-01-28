@@ -1,2 +1,2 @@
-#markup-languages \n
+#markup-languages
 Markup languages subject notes&amp;exercicies
