@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Validación de DNI y email</title>
+</head>
+<body>
+
+    <h1>Validación de DNI y correo</h1>
+
+    <form method="post"enctype="text/plain">
+
+        <p>DNI: <input type=text name="dni" pattern="[0-9]{8}[A-Z]" title="Introduce tu DNI" placeholder="00000000Y" required></p>
+        <p>Email: <input type=text name="email" pattern="^[^@]+@[^@]+\.[a-zA-Z]{2,}$" title="Introduce tu email" placeholder="ejemplo@hola.com" required></p>
+        <br>
+        <button type="submit">Enviar información</button>
+
+    </form>
+    
+</body>
+</html>
