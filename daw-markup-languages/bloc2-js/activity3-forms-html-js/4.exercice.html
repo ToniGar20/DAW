@@ -8,35 +8,38 @@
 
     <h1>Validación de DNI y correo (con JS)</h1>
 
-    <form method="post"enctype="text/plain" onsubmit="validation()">
+    <form method="post" enctype="text/plain" onsubmit="return validation()">
 
-        <p>DNI: <input id="dni" type=text name="dni" title="Introduce tu DNI" placeholder="00000000Y"></p>
-        <p>Email: <input id= "email" type=text name="email" title="Introduce tu email" placeholder="ejemplo@hola.com"></p>
+        <p>DNI: <input id="dni" type=text name="dni" title="Introduce tu DNI" placeholder="00000000Y"/></p>
+        <p>Email: <input id= "email" type=text name="email" title="Introduce tu email" placeholder="ejemplo@hola.com"/></p>
         <br>
-        <button type="submit" onclick="dniIsValid()" onclick="emailIsValid()">Enviar información</button>
+        <button type="submit">Enviar</button>
 
     </form>
 
     <script>
 
-        var dniValue = document.getElementById("dni").value;
-        var emailValue = document.getElementById("email").value;
+        function validation() {
+            let dniValue = document.getElementById("dni").value;
+            let emailValue = document.getElementById("email").value;
 
-        // UNIFICAR FUNCION Y LLAMARLA DESDE ONSUBMIT COMO VALIDATION
-
-        function emailIsValid (emailValue){
-            if(!(/[^@]+@[^@]+\.[a-zA-Z]{2,}$/.test(emailValue))){
-                alert("El email introducido es incorrecto");
+            if (!(/[0-9]{8}[A-Z]/.test(dniValue))) {
+                alert("Error. El DNI introducido es incorrecto");
                 return false;
             }
-        }
 
-        function dniIsValid (dniValue){
-            if(!(/[0-9]{8}[A-Z]/.test(dniValue))){
-                alert("El DNI introducido es incorrecto");
+            else if (!(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(emailValue))) {
+                alert("Error. El EMAIL introducido es incorrecto");
                 return false;
             }
+
+            else {
+                alert("LOS DATOS HAN SIDO VALIDADOS")
+            }
+
+            return true;
         }
+
     </script>
     
 </body>
