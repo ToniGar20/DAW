@@ -23,7 +23,12 @@
             let dniValue = document.getElementById("dni").value;
             let emailValue = document.getElementById("email").value;
 
-            if (!(/[0-9]{8}[A-Z]/.test(dniValue))) {
+            if (!(/[0-9]{8}[A-Z]/.test(dniValue)) && !(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(emailValue))) {
+                alert("Error. AMBOS campos son incorrectos");
+                return false;
+            }
+
+            else if (!(/[0-9]{8}[A-Z]/.test(dniValue))) {
                 alert("Error. El DNI introducido es incorrecto");
                 return false;
             }
