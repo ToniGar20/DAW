@@ -1,10 +1,44 @@
+<!-- Form to add an image, checkbox use and date -->
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>6.Formulario del ejercicio 6</title>
+    <style>
+        fieldset{background-color: lawngreen}
+        body{background-color: burlywood; font-family: Verdana}
+    </style>
 </head>
 <body>
 
+<h1>6.¡Crea tu perfil de usuario!</h1>
+
+<form method="post" enctype="text/plain">
+
+    <fieldset> <legend><b>Sube una imagen que sea tu avatar</b></legend>
+        <label><input type="file" name="profileimage" accept="image/*" dirname=" "></label>
+    </fieldset>
+
+    <fieldset> <legend><b>Indica tus hobbies</b></legend>
+        <label>Deportes<input type="checkbox" tabindex="2" value="yes"/></label>
+        <label>Viajes<input type="checkbox" tabindex="3" value="yes"/></label>
+        <label>Música<input type="checkbox" tabindex="4" value="yes" /></label>
+        <label>TV<input type="checkbox" tabindex="5" value="yes" /></label>
+        <label>Familia<input type="checkbox" tabindex="6" value="yes" /></label>
+        <label>Libros<input type="checkbox" tabindex="7" value="yes" /></label>
+        <label>Naturaleza<input type="checkbox" tabindex="8" value="yes" /></label>
+        <label>Otro:<input type="text"/></label>
+    </fieldset>
+
+    <fieldset> <legend><b>Tu cumpleaños</b></legend>
+        <label>Introduce una fecha <input type="date" id="birthday" required/></label>
+    </fieldset>
+
+    <br>
+    <button type="submit">Enviar</button>
+</form>
+
 </body>
+
 </html>
