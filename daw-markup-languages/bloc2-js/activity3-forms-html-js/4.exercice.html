@@ -10,11 +10,15 @@
 
     <h1>4.Validación de DNI y correo (con JS)</h1>
 
-    <form method="post" enctype="text/plain" onsubmit="return validation()">
+    <form method="post" enctype="text/plain" onsubmit="return validation()"> <!-- Validation with JS -->
 
         <p>DNI: <input id="dni" type=text name="dni" title="Introduce tu DNI" placeholder="00000000Y"/></p>
         <p>Email: <input id= "email" type=text name="email" title="Introduce tu email" placeholder="ejemplo@hola.com"/></p>
         <br>
+        <!--
+        Patterns for a DNI length with 8 number + 1 letter. Also the email patterns works for most of emails
+        I've also added placeholders to show examples of valid inputs.
+        -->
         <button type="submit">Enviar</button>
 
     </form>
@@ -24,27 +28,32 @@
         function validation() {
             let dniValue = document.getElementById("dni").value;
             let emailValue = document.getElementById("email").value;
+            // capturing both values
 
             if (!(/[0-9]{8}[A-Z]/.test(dniValue)) && !(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(emailValue))) {
                 alert("Error. AMBOS campos son incorrectos");
                 return false;
             }
+            // if both fields are wrong or empty, there is displayed a custom alert
 
             else if (!(/[0-9]{8}[A-Z]/.test(dniValue))) {
                 alert("Error. El DNI introducido es incorrecto");
                 return false;
             }
+            //DNI has to match the regex or alert of error is displayed
 
             else if (!(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(emailValue))) {
                 alert("Error. El EMAIL introducido es incorrecto");
                 return false;
             }
+            //Email has to match the regex or alert of error is displayed
 
             else {
-                alert("LOS DATOS HAN SIDO VALIDADOS")
+                confirm("LOS DATOS HAN SIDO VALIDADOS")
             }
 
             return true;
+            //If every input is correct a message of confirmation is displayed
         }
 
     </script>

@@ -6,6 +6,7 @@
     <meta charset="UTF-8">
     <title>6.Formulario del ejercicio 6</title>
     <style>
+        /* Some custom CSS...*/
         fieldset{background-color: lawngreen}
         body{background-color: burlywood; font-family: Verdana}
     </style>
@@ -19,6 +20,7 @@
     <fieldset> <legend><b>Sube una imagen que sea tu avatar</b></legend>
         <label><input type="file" name="profileimage" accept="image/*" dirname=" "></label>
     </fieldset>
+    <!-- First thing, the image using accept attribute to just allow image types-->
 
     <fieldset> <legend><b>Indica tus hobbies</b></legend>
         <label>Deportes<input type="checkbox" tabindex="2" value="yes"/></label>
@@ -30,10 +32,12 @@
         <label>Naturaleza<input type="checkbox" tabindex="8" value="yes" /></label>
         <label>Otro:<input type="text"/></label>
     </fieldset>
+    <!-- Checkboxes of different items. Last one is an input text if user whats to add another value-->
 
     <fieldset> <legend><b>Tu cumpleaños</b></legend>
         <label>Introduce una fecha <input type="date" id="birthday" required/></label>
     </fieldset>
+    <!-- Date asking for the birth date-->
 
     <br>
     <button type="submit">Enviar</button>

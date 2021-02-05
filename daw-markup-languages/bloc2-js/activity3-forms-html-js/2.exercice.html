@@ -12,10 +12,14 @@
 
     <form method="post"enctype="text/plain">
 
-        <p>DNI: <input type=text name="dni" pattern="[0-9]{8}[A-Z]" title="Introduce tu DNI" placeholder="00000000Y" required></p>
+        <p>DNI: <input type=text name="dni" pattern="[0-9]{8}[A-Z]" title="Introduce tu DNI" placeholder="00000000Y" required></p> <!-- Pattern for a DNI length with 8 number + 1 letter-->
         <p>Email: <input type=text name="email" pattern="^[^@]+@[^@]+\.[a-zA-Z]{2,}$" title="Introduce tu email" placeholder="ejemplo@hola.com" required></p>
         <br>
-        <button type="submit">Enviar información</button>
+        <!--
+        Patterns for a DNI length with 8 number + 1 letter. Also the email patterns works for most of emails
+        I've also added placeholders to show examples of valid inputs.
+        -->
+        <button type="submit">Enviar información</button> <!-- Using submit for sent to server -->
 
     </form>
     

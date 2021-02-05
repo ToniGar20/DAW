@@ -6,6 +6,7 @@
     <meta charset="UTF-8">
     <title>3.Títulos h2 nuevos desde inputs</title>
     <style>
+        /* Style requirements for the exercice */
         body {background-color: aqua;}
         div {width: 800px; height:200px; display: -moz-box}
         h1 {align-content: center}
@@ -15,23 +16,23 @@
 </head>
 <body>
 
-<div><h1 id="winners">3.A continuación, ¡estos son los ganadores!</h1></div>
+<div><h1 id="winners">3.A continuación, ¡estos son los ganadores!</h1></div> <!-- Main heading -->
 
 <aside>
     <form method="post">
         <label>Nombre:</label>
         <input type="text" id="name" placeholder="Tu nombre" required/>
-        <button type="button" onclick="magic()">Enviar</button>
+        <button type="button" onclick="magic()">Enviar</button> <!-- Calling JS function on click -->
     </form>
 </aside>
 
 <script>
     function magic(){
-        let formValue = document.getElementById("name").value;
-        let newTextHeading = document.createTextNode(formValue);
-        let newNodeHeading = document.createElement("h2");
-        newNodeHeading.appendChild(newTextHeading);
-        document.getElementById("winners").appendChild(newNodeHeading);
+        let formValue = document.getElementById("name").value; //Capturing the value of the input
+        let newTextHeading = document.createTextNode(formValue); //Text node with the value of the form
+        let newNodeHeading = document.createElement("h2"); //New h2 is created
+        newNodeHeading.appendChild(newTextHeading); //Setting text to the h2
+        document.getElementById("winners").appendChild(newNodeHeading); // Appending h2 to the div
     }
 </script>
 
