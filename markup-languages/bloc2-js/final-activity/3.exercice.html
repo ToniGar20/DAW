@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .center{display: block; margin-left: auto; margin-right: auto}
+    </style>
+</head>
+<body>
+
+<h1>Botones que actúan sobre imágenes</h1>
+
+<button type="button" onclick="showImg()">Haz visible la imagen</button>
+<button type="button" onclick="hideImg()">Esconde la imagen</button>
+<button type="button" onclick="enlargeImg()">Ampliar imagen</button>
+<button type="button" onclick="reduceImg()">Reducir imagen</button>
+<br>
+<br>
+<br>
+<div>
+    <img id="the-photo" class="center" src="imgs/bosque-pixabay.jpg" width=300px height=150px style="visibility: hidden">
+</div>
+
+<script>
+
+    let theImg = document.getElementById("the-photo");
+
+    function showImg(){
+            theImg.style.visibility = "visible";
+    }
+
+    function hideImg(){
+            theImg.style.visibility = "hidden";
+    }
+
+    function enlargeImg() {
+        let currentWidth = theImg.clientWidth;
+        let currentHeight = theImg.clientHeight;
+        console.log(currentWidth);
+        console.log(currentHeight);
+
+        if(currentWidth == 600 && currentHeight == 350 ) {
+        alert("La imagen tiene su tamaño máximo")
+        } else {
+            theImg.style.width = currentWidth + 30 + "px";
+            theImg.style.height = currentHeight + 20 + "px";
+        }
+    }
+
+    function reduceImg(){
+        let currentWidth = theImg.clientWidth;
+        let currentHeight = theImg.clientHeight;
+        console.log(currentWidth);
+        console.log(currentHeight);
+
+        if(currentWidth == 120 && currentHeight == 30 ) {
+            alert("La imagen tiene su tamaño mínimo")
+        } else {
+            theImg.style.width = currentWidth - 30 + "px";
+            theImg.style.height = currentHeight - 20 + "px";
+        }
+    }
+
+</script>
+
+</body>
+</html>
