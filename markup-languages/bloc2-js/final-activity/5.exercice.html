@@ -32,7 +32,7 @@
             return false;
             }
 
-        else if (!(/[A-Z]{1}[a-z]{7}[0-9]{2}/.test(passwordValue))) {
+        else if (!(/[A-Z]{1}[a-z]{3,7}[0-9]{2}/.test(passwordValue))) {
         alert("Error. La CONTRASEÑA introducida no es válida");
         return false;
         }
