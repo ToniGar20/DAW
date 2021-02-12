@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Elementos</title>
 </head>
 <body>
 
@@ -41,24 +41,27 @@
 </main>
 <footer>
     <p>Publicado el 24 enero, 2021 por Isidro Ros</p>
+    <button type="button" onclick="information()">Clicka para saber los "p" y "h2" de la página</button>
 </footer>
 
+
 <script>
+    function information() {
 
-    let headings2 = document.getElementsByTagName("h2");
-    let paragraphs = document.getElementsByTagName("p");
-    // storing into arrays the tags and their information
+        let headings2 = document.getElementsByTagName("h2");
+        let paragraphs = document.getElementsByTagName("p");
+        // storing into arrays the tags and their information
 
-    for(i = 0; i < headings2.length; i++){
-        alert("Este es el h2 número " + [i+1] + ": " + headings2[i].innerText);
+        for (i = 0; i < headings2.length; i++) {
+            alert("Este es el h2 número " + [i + 1] + ": " + headings2[i].innerText);
+        }
+        // running through the array to get the text of each element with .innerText, showing it by and alert
+
+        for (j = 0; j < paragraphs.length; j++) {
+            alert("Este es el párrafo número " + [j + 1] + ": " + paragraphs[j].innerText);
+        }
+        // as in the other scope, same run but for the text of "p" tags information using also .innerText
     }
-    // running through the array to get the text of each element with .innerText, showing it by and alert
-
-    for(i = 0; i < paragraphs.length; i++){
-        alert("Este es el párrafo número " + [i+1] + ": " + paragraphs[i].innerText);
-    }
-    // as in the other scope, same run but for the text of "p" tags information using also .innerText
-
 </script>
 
 </body>

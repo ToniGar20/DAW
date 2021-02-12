@@ -2,16 +2,21 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>5.Formulario</title>
+    <style>
+        body{background-color: darkslategray; color: gold; font-family: Arial, Helvetica, sans-serif}
+        button{background-color: deeppink; color: white}
+        input{background-color: lightskyblue; color: darkred; font-weight: bold; border: 3px solid}
+    </style>
 </head>
 <body>
 
-    <form method="post" enctype="text/plain">
+    <form method="post" onsubmit="return validation()">
         <fieldset> <legend>Introduce tus datos</legend>
-            <input type="text" id="fullname" title="Introduce tu nombre" placeholder="P.Ej.: Jorge Gutiérrez" required/>
-            <input type="text" id="email" title="Introduce tu email" placeholder="xxx@yyy.zzz" required/>
-            <input type="tel" id="mobile-phone" title="Introduce tu teléfono móvil" placeholder="6XX XXX XXX" required/>
-            <input type="text" id="password" title="Introduce una contraseña de entre 6 y 10 caracteres que empiece en mayúscula y acabe con dos números" placeholder="Ejemplo10" required/>
+            <label>Nombre y apellido/s: <input type="text" id="fullname" title="Introduce tu nombre" placeholder="P.Ej.: Jorge Gutiérrez" autofocus required /></label>
+            <label>Email: <input type="text" id="email" title="Introduce tu email" placeholder="xxx@yyy.zzz" required/></label>
+            <label>Teléfono: <input type="tel" id="mobile-phone" title="Introduce tu teléfono móvil sin espacios" placeholder="9 dígitos" pattern="[0-9]{9}" required/></label>
+            <label>Crea una contraseña: <input type="password" id="password" title="Crea una contraseña de entre 6 y 10 caracteres que empiece en mayúscula y acabe con dos números" placeholder="P.EJ.: Jdnktypo10" required/></label>
         </fieldset>
         <br>
         <button type="submit">Envía el formulario</button>
@@ -19,34 +24,23 @@
 
     <script>
     function validation() {
-    let dniValue = document.getElementById("dni").value;
-    let emailValue = document.getElementById("email").value;
-    // capturing both values
+        let emailValue = document.getElementById("email").value;
+        let passwordValue = document.getElementById("password").value;
 
-    if (!(/[0-9]{8}[A-Z]/.test(dniValue)) && !(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(emailValue))) {
-    alert("Error. AMBOS campos son incorrectos");
-    return false;
-    }
-    // if both fields are wrong or empty, there is displayed a custom alert
+        if (!(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(emailValue))) {
+            alert("Error. El EMAIL introducido es incorrecto");
+            return false;
+            }
 
-    else if (!(/[0-9]{8}[A-Z]/.test(dniValue))) {
-    alert("Error. El DNI introducido es incorrecto");
-    return false;
-    }
-    //DNI has to match the regex or alert of error is displayed
+        else if (!(/[A-Z]{1}[a-z]{7}[0-9]{2}/.test(passwordValue))) {
+        alert("Error. La CONTRASEÑA introducida no es válida");
+        return false;
+        }
+        //Password has to match the regex or alert of error is displayed
 
-    else if (!(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(emailValue))) {
-    alert("Error. El EMAIL introducido es incorrecto");
-    return false;
-    }
-    //Email has to match the regex or alert of error is displayed
-
-    else {
-    confirm("LOS DATOS HAN SIDO VALIDADOS")
-    }
-
-    return true;
-    //If every input is correct a message of confirmation is displayed
+        else {
+            return true;
+        }
     }
     </script>
 </body>
