@@ -3,26 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        body{background-color: yellow}
+        button{color: wheat; background-color: black}
+    </style>
 </head>
 <body>
 
     <header>
-        <h1>Enlaces de interés</h1>
+        <h1>Enlace de interés</h1>
     </header>
 
     <main>
-        <ul>
-            <li><a href="https://www.diariodemallorca.es/" target="_blank" onclick="linkConfirmation()">Diario de Mallorca</a></li>
-            <li><a href="https://www.tripadvisor.es/Tourism-g187462-Majorca_Balearic_Islands-Vacations.html" target="_blank" onclick="linkConfirmation()">Guía TripAdvisor de Mallorca</a></li>
-            <li><a href="https://mallorcafashionoutlet.com/" target="_blank" onclick="linkConfirmation()">Mallorca Fashion Outlet</a></li>
-            <li><a href="https://www.turismepetit.com/" target="_blank" onclick="linkConfirmation()">Turisme Petit</a></li>
-            <li><a href="https://www.cifpfbmoll.eu/" target="_blank" onclick="linkConfirmation()">CIFP Francesc de Borja Moll</a></li>
-        </ul>
+        <button type="button" onclick="linkConfirmation()">Ir a la página web</button>
     </main>
 
 <script>
     function linkConfirmation() {
-        confirm("Este enlace te dirige a otro sitio web. ¿Estás seguro/a?")
+        if(window.confirm("Este enlace te dirige a otro sitio web. ¿Estás seguro/a?") == true){
+            location.href = "https://www.w3schools.com";
+        } else {
+            alert ("No se ha realizado ninguna acción")
+        }
     }
 </script>
 

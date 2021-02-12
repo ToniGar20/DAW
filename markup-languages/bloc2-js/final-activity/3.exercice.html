@@ -5,6 +5,7 @@
     <title>Title</title>
     <style>
         .center{display: block; margin-left: auto; margin-right: auto}
+        body{background-color: #229954}
     </style>
 </head>
 <body>
@@ -37,8 +38,6 @@
     function enlargeImg() {
         let currentWidth = theImg.clientWidth;
         let currentHeight = theImg.clientHeight;
-        console.log(currentWidth);
-        console.log(currentHeight);
 
         if(currentWidth == 600 && currentHeight == 350 ) {
         alert("La imagen tiene su tamaño máximo")
@@ -51,8 +50,6 @@
     function reduceImg(){
         let currentWidth = theImg.clientWidth;
         let currentHeight = theImg.clientHeight;
-        console.log(currentWidth);
-        console.log(currentHeight);
 
         if(currentWidth == 120 && currentHeight == 30 ) {
             alert("La imagen tiene su tamaño mínimo")
