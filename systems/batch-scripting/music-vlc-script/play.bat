@@ -60,7 +60,7 @@
 
     if %play%==1 (
         goto songs-list
-        )
+    )
     if %play%==2 (
         echo "----------------------------------------------------------------------------"   
         echo "Reproduciendo lista en modo ORDENADO"
@@ -76,7 +76,7 @@
         echo "9 - Soundgarden - Been Away Too Long"
         echo "10 - Velvet Revolver - Suckertrain Blues"
         "C:\Program Files\VideoLAN\VLC\vlc.exe" -I dummy --loop --playlist-tree --global-key-play-pause=p --global-key-vol-up=u  --global-key-vol-down=d --global-key-vol-mute=m --global-key-loop=r --global-key-prev=b --global-key-next=n --global-key-quit=q "songs/"
-                )
+    )
     if %play%==3 (
         echo "----------------------------------------------------------------------------"   
         echo "Reproduciendo lista en modo ALEATORIO"
