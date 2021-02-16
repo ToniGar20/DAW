@@ -14,7 +14,7 @@
     set /p num=Elección: 
 
     if not defined num (
-        echo Tienes que elegir una canción
+        echo "Tienes que elegir una opción válida"
         pause > nul
         goto menu
     )
