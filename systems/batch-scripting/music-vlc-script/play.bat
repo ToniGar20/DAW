@@ -1,5 +1,8 @@
 chcp 65001
+color 06
 @echo off
+
+title Reproductor de música ROCK por CONSOLA
 
 :menu
     cls
