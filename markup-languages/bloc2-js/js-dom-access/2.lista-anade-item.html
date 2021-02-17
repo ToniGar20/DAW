@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>2-3.lista-anade-item</title>
+    </head>
+    <body>
+
+        <ul id="list">
+            <li id=1>Teclado</li>
+            <li id=2>Ratón</li>
+        </ul>
+        
+        <button onclick=addItem()>Añade un elemeno a la lista</button>
+
+        <script>
+            function addItem(){
+                let newItem = prompt("Introduce texto de lo que quieres añadir")
+                let newItemCreated = document.createElement("li");
+                let newItemText = document.createTextNode(newItem);
+                newItemCreated.appendChild(newItemText);
+                document.getElementById("list").appendChild(newItemCreated);
+            }
+        </script>
+
+    </body>
+</html>

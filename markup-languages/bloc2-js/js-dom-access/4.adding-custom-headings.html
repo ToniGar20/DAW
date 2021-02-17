@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>4.adding-custom-headings</title>
+    </head>
+    <body>
+
+        <div id="headings">
+        <h1 id=1>Bienvenid@ a la página que añade encabezados</h1>
+        </div>
+
+        <button onclick=newHeading()>Añade un encabezado 1 a 6</button>
+
+        <script>
+
+            function newHeading(){
+                let numberQuestion = parseInt(prompt('¿Qué tipo de "h" quieres añadir? (1,2,3..)'));
+                // asking the "h" size
+                if(numberQuestion >= 1 && numberQuestion <= 6){
+                    // the code just runs if there's a valid heading between h1-h6
+                    let valueQuestion = prompt("Introduce su texto");
+                    let newHeadingCreated = document.createElement(`h${numberQuestion}`);
+                    // element is created with the number introduced
+                    let newHeadingText = document.createTextNode(valueQuestion);
+                    // the value of the heading is created as a new node 
+                    newHeadingCreated.appendChild(newHeadingText);
+                    // the new node create above is appended or added to the heading created.
+                    document.getElementById("headings").appendChild(newHeadingCreated);
+                    // finally whe append the heading (with it text) o the div with the id "headings"
+                } else alert("No has introducido un número. El proceso no se ha completado");
+            }
+
+        </script>
+
+    </body>
+</html>
+

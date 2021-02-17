@@ -1,0 +1,33 @@
+<!--
+Introducing 7 week days. Alert of the results in the opposite order
+<-->
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Los días de la semana al revés</title>
+        
+    </head>
+    <body>
+        <h1>Los días de la semana al revés</h1>
+        <section>
+            <button onclick="magic()">Introduce los días</button>
+        </section>
+        
+        <script>
+            function magic(){
+                let weekDays = [];
+                do{
+                    let days = prompt(`Introduce los días de semana. Llevas ${weekDays.length} introducidos.`);
+                    weekDays.push(days);
+                }
+                while (weekDays.length < 7);
+                for (i = 6; i >= 0; i--){
+                    alert(weekDays[i]);
+                }
+            }
+        </script>
+    </body>
+</html>

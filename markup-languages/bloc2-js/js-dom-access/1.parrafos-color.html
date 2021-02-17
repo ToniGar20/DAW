@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>1.parrafos-color</title>
+    </head>
+    <body>
+
+        <section>
+        <p id=p1>
+            El próximo domingo, los ciudadanos tendrán ocasión de hacer política, de participar en la toma de decisiones públicas, cuando depositen su voto para elegir a 194 diputados de mayoría y tal vez 
+            cincuenta de partido. La democracia electoral les permite, de ese modo ejercer  funciones de gobierno.
+        </p>
+        <p id=p2>
+            Una vez que bajes del vehículo, observarás varios comercios dentro de la estación de autobuses. No entres, venden muy caro. Sal de la estación, camina tres cuadras hacia el norte, doblas a la 
+            izquierda, camina otras tres cuadras y verás una tienda grande, llamada “El puerto del tiburón”. Ahí encontrarás lo que buscas. Y lo que no buscas también.
+        </p>
+        </section>
+
+        <section>
+        <button onclick=magic()>Clica para cambiar el color de los párrafos</button>
+        </section>
+
+        <script>
+            function magic(){
+                document.getElementById("p1").style.color = "red";
+                document.getElementById("p1").style.backgroundColor = "pink";
+                document.getElementById("p2").style.color = "green";
+                document.getElementById("p2").style.backgroundColor = "blue";
+            }
+        </script>
+
+    </body>
+</html>

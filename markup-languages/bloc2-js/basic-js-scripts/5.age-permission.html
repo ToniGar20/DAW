@@ -1,0 +1,28 @@
+<!--
+Sript asks for age. If age is under 16, alert of not given permisson.
+If over, a link is displayed on screen
+<-->
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Enlace para mayores de 16</title>
+    </head>
+    <body>
+
+        
+        <script>
+
+            let ageQuestion = parseInt(prompt("¿Qué edad tienes?"));
+            if (ageQuestion >= 16) {
+                document.write(`<a href="http://www.caib.es">Aquí está el enlace al CAIB</a>`)
+            } else {
+                alert("No tienes 16 años así que no puedes acceder al enlace")
+            }
+
+        </script>
+
+    </body>
+</html>

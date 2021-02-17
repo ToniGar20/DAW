@@ -1,0 +1,51 @@
+<!--
+Sript asks for 3 marks. Doing the average, there are different messages for passing or not.
+<-->
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Las notas</title>
+    </head>
+    <body>
+
+        <h1>Descuentos de los coches en función de su marca</h1>
+        
+        <button onclick=offer()>¡Calcula tu descuento!</button>
+
+        <script>
+
+            function offer(){
+                let carBrand = prompt("¿Qué marca de coche deseas comprar? Los descuento son para Ford, Seat, Citroen y Audi");
+                if (carBrand === "Ford"){
+                    alert("El descuento es de un 10%");
+                } else if (carBrand === "Seat"){
+                    alert("El descuento es de un 8%");
+                } else if (carBrand === "Citroen"){
+                    alert("El descuento es de un 6%");
+                } else if (carBrand === "Audi"){
+                    alert("El descuento es de un 4%");
+                } else alert("La marca que has introducido no tiene descuentos disponibles")
+
+                let price = prompt("¿Cuál es el precio de compra de tu coche?");
+                if (carBrand === "Ford"){
+                    let finalPriceFord = price * 0.9
+                    alert(`El precio final de tu Ford es de ${finalPriceFord}`);
+                } else if (carBrand === "Seat"){
+                    let finalPriceSeat = price * 0.92
+                    alert(`El precio final de tu Seat es de ${finalPriceSeat}`);
+                } else if (carBrand === "Citroen"){
+                    let finalPriceCitroen = price * 0.94
+                    alert(`El precio final de tu Citroen es de ${finalPriceCitroen}`);
+                } else if (carBrand === "Audi"){
+                    let finalPriceAudi = price * 0.96
+                    alert(`El precio final de tu Audi es de ${finalPriceAudi}`);
+                }
+            }
+
+        </script>
+
+    </body>
+</html>
