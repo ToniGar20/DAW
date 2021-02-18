@@ -17,7 +17,7 @@
 
 <main>
     <form method="post">
-        <fieldset> <legend>Introduce tus datos</legend>
+        <fieldset> <legend>¡Apúntate para practicar deporte!</legend>
             <label>Nombre y apellido/s: <input type="text" id="fullname" title="Introduce tu nombre" placeholder="P.Ej.: Jorge Gutiérrez" required /></label>
             <label>Edad: <input type="number" id="age" title="Edad" required/></label>
             <label>Deporte: <input type="text" id="sport" title="Introduce tu deporte" placeholder="Fútbol, Baloncesto, Atletismo, etc." required/></label>
@@ -29,27 +29,39 @@
     </form>
 </main>
 
-<section>
-    <h3>holi</h3>
-    <h3>adiosi</h3>
-</section>
-
 <script>
     function magic() {
 
         let sport = (document.getElementById("sport").value);
-        let newItem = []
+        let newItem = [];
         newItem.push(document.getElementById("fullname").value);
         newItem.push(document.getElementById("age").value);
         newItem.push(document.getElementById("shirt-color").value);
         newItem.push(document.getElementById("years").value);
-        console.log(newItem);
-        console.log(document.getElementsByTagName("h3").innerText);
-        // if que compruebe si el deporte introduce existe como h2 y que si no, lo cree
 
-        // if(sport == )
+        let sections = [];
+        for (let i=0; i<document.getElementsByTagName("h2"); i++){
+            sections.push(document.getElementsByTagName("h2")[i]);
+        }
 
-        let newContent = `<li>${newItem[0]}, ${newItem[1]} años, color de camiseta ${newItem[2]}. ${newItem[3]} años practicando deporte.</li>`
+        if(!sections.includes(sport)){
+
+            let newContent = `<li>${newItem[0]}, ${newItem[1]} años, color de camiseta ${newItem[2]}. ${newItem[3]} años practicando deporte.</li>`;
+
+            let newSection = document.createElement('section');
+            newSection.setAttribute("id", `${sport}`);
+            let newHeading = document.createElement("h2");
+            let newTextHeading = document.createTextNode(`${sport}`);
+            newHeading.appendChild(newTextHeading);
+            newSection.appendChild(newHeading);
+
+            document.getElementById(`${sport}`).appendChild(newContent);
+            document.getElementsByTagName("body")[0].appendChild(newSection);
+
+        } else {
+            alert("under construction!")
+        }
+
     }
 </script>
 
