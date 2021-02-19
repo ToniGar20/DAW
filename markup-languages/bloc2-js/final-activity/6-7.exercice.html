@@ -7,32 +7,48 @@
         fieldset {margin: 10px;padding: 10px; border: 10px;}
         fieldset {display: inline-block; vertical-align: middle; background: #eee;}
         label {display: block; font-weight: bold; margin: 5px; padding: 5px; border: 5px;}
+        aside { position:relative; float:right; }
+        input:invalid {border: red solid 3px;}
     </style>
 </head>
 <body>
+
+<aside>
+    <form action="http://www.google.es/search" method="get" target="_blank">
+        Google:
+        <input type="search" name="q" placeholder="P.ej.: deportes">
+        <input type="submit" value="Búsqueda">
+    </form>
+</aside>
 
 <header>
     <h1>Nuestros usuarios son deportistas</h1>
 </header>
 
+
 <main>
+    <p>Únete a nuestro club de deportes para practicar uno de los 5 tipos de deportes siguientes:</p>
+    <p>Fútbol, Basket, Volleyball, Balonmano, Tenis o Atletismo. ¡No olvides introducir una de estas opciones en el formulario!</p>
+
     <form method="post">
-        <fieldset> <legend>¡Apúntate para practicar deporte!</legend>
-            <label>Nombre y apellido/s: <input type="text" id="fullname" title="Introduce tu nombre" placeholder="P.Ej.: Jorge Gutiérrez" required /></label>
+        <fieldset> <legend>¡Apúntate aquí!</legend>
+            <label>Nombre y apellido/s: <input type="text" id="fullname" title="Introduce tu nombre" required /></label>
             <label>Edad: <input type="number" id="age" title="Edad" required/></label>
-            <label>Deporte: <input type="text" id="sport" title="Introduce tu deporte" placeholder="Fútbol, Baloncesto, Atletismo, etc." required/></label>
-            <label>Color de camiseta de tu equipo: <input type="text" id="shirt-color" title="Introduce el color de camiseta" placeholder="Rojo, rayas azules y blancas, etc." required/></label>
-            <label>Años practicando deporte: <input type="number" id="years" title="Número de años" placeholder="P.EJ.: 3" required/></label>
+            <label>Deporte: <input type="text" id="sport" title="Introduce tu deporte" pattern="Fútbol|Basket|Volleyball|Balonmano|Tenis|Atletismo" required/></label>
+            <label>Color de camiseta de tu equipo: <input type="text" id="shirt-color" title="Introduce el color de camiseta" required/></label>
+            <label>Años practicando deporte: <input type="number" id="years" title="Número de años" required/></label>
         </fieldset>
         <br>
         <button type="button" onclick="magic()">Envía el formulario</button>
     </form>
 </main>
 
+
 <script>
     function magic() {
 
         let sport = (document.getElementById("sport").value);
+
         let newItem = [];
         newItem.push(document.getElementById("fullname").value);
         newItem.push(document.getElementById("age").value);
@@ -40,28 +56,35 @@
         newItem.push(document.getElementById("years").value);
 
         let sections = [];
-        for (let i=0; i<document.getElementsByTagName("h2"); i++){
-            sections.push(document.getElementsByTagName("h2")[i]);
+        for (let i=0; i < document.getElementsByTagName("h2").length; i++){
+            sections.push(document.getElementsByTagName("h2")[i].innerText);
         }
 
         if(!sections.includes(sport)){
 
-            let newContent = `<li>${newItem[0]}, ${newItem[1]} años, color de camiseta ${newItem[2]}. ${newItem[3]} años practicando deporte.</li>`;
+            let newContent = `${newItem[0]}, ${newItem[1]} años, color de camiseta ${newItem[2]}. ${newItem[3]} años practicando deporte.`;
 
             let newSection = document.createElement('section');
             newSection.setAttribute("id", `${sport}`);
             let newHeading = document.createElement("h2");
             let newTextHeading = document.createTextNode(`${sport}`);
+            let newPerson = document.createElement("li");
+            let newPersonText = document.createTextNode(newContent);
+
             newHeading.appendChild(newTextHeading);
             newSection.appendChild(newHeading);
-
-            document.getElementById(`${sport}`).appendChild(newContent);
+            newPerson.appendChild(newPersonText);
+            newSection.appendChild(newPerson);
             document.getElementsByTagName("body")[0].appendChild(newSection);
 
         } else {
-            alert("under construction!")
-        }
+            let newContent = `${newItem[0]}, ${newItem[1]} años, color de camiseta ${newItem[2]}. ${newItem[3]} años practicando deporte.`;
 
+            let newPerson = document.createElement("li");
+            let newPersonText = document.createTextNode(newContent);
+            newPerson.appendChild(newPersonText);
+            document.getElementById(`${sport}`).appendChild(newPerson);
+        }
     }
 </script>
 
