@@ -22,8 +22,10 @@
     function linkConfirmation() {
         if(window.confirm("Este enlace te dirige a otro sitio web QUE PUEDE SER PELIGROSO. ¿Estás seguro/a?") == true){
             location.href = "https://www.google.com/";
+            // using location-href to open the link
         } else {
             alert ("No se ha realizado ninguna acción")
+            // if not confirmed, alert of cancelled action
         }
     }
 </script>

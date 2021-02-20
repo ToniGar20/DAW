@@ -8,7 +8,6 @@
         fieldset {display: inline-block; vertical-align: middle; background: #eee;}
         label {display: block; font-weight: bold; margin: 5px; padding: 5px; border: 5px;}
         aside { position:relative; float:right; }
-        input:invalid {border: red solid 3px;}
     </style>
 </head>
 <body>
@@ -20,6 +19,7 @@
         <input type="submit" value="Búsqueda">
     </form>
 </aside>
+<!-- This aside is made for the requirements of exercice 7 -->
 
 <header>
     <h1>Nuestros usuarios son deportistas</h1>
@@ -29,14 +29,15 @@
 <main>
     <p>Únete a nuestro club de deportes para practicar uno de los 5 tipos de deportes siguientes:</p>
     <p>Fútbol, Basket, Volleyball, Balonmano, Tenis o Atletismo. ¡No olvides introducir una de estas opciones en el formulario!</p>
+    <!-- This p is announcing to the user that he can sign up for just these 6 sports. Any other wont be validated -->
 
     <form method="post">
         <fieldset> <legend>¡Apúntate aquí!</legend>
-            <label>Nombre y apellido/s: <input type="text" id="fullname" title="Introduce tu nombre" required /></label>
-            <label>Edad: <input type="number" id="age" title="Edad" required/></label>
-            <label>Deporte: <input type="text" id="sport" title="Introduce tu deporte" pattern="Fútbol|Basket|Volleyball|Balonmano|Tenis|Atletismo" required/></label>
-            <label>Color de camiseta de tu equipo: <input type="text" id="shirt-color" title="Introduce el color de camiseta" required/></label>
-            <label>Años practicando deporte: <input type="number" id="years" title="Número de años" required/></label>
+            <label>Nombre y apellido/s: <input type="text" id="fullname" title="Introduce tu nombre"/></label>
+            <label>Edad: <input type="number" id="age" title="Edad"/></label>
+            <label>Deporte: <input type="text" id="sport" title="Introduce tu deporte" pattern="Fútbol|Basket|Volleyball|Balonmano|Tenis|Atletismo"/></label>
+            <label>Color de camiseta de tu equipo: <input type="text" id="shirt-color" title="Introduce el color de camiseta"/></label>
+            <label>Años practicando deporte: <input type="number" id="years" title="Número de años"/></label>
         </fieldset>
         <br>
         <button type="button" onclick="magic()">Envía el formulario</button>
@@ -48,34 +49,67 @@
     function magic() {
 
         let sport = (document.getElementById("sport").value);
+        let validSports = ["Fútbol", "Basket", "Volleyball", "Balonmano", "Tenis", "Atletismo"]
+        // Two steps. In sports is saved the form value sport. In validSports are stored the 6 right sports
+
+        for(let i=0; i<validSports.length; i++) {
+            if (validSports.includes(sport)) {
+                continue;
+            } else {
+                alert("Introduce un deporte válido");
+                return;
+            }
+        }
+        // If the sport passed in the form has not match into the array, there is displayed an alert and the function exits
+        // If the sport passed in the form is included into the array, then the code continues
 
         let newItem = [];
         newItem.push(document.getElementById("fullname").value);
         newItem.push(document.getElementById("age").value);
         newItem.push(document.getElementById("shirt-color").value);
         newItem.push(document.getElementById("years").value);
+        // newItem is storing all the remaining data of the form: fullname, age, shirt-color and years.
+
+        for(let j=0; j<newItem.length; j++) {
+            if (newItem[j] == null || newItem[j] == "") {
+                alert("Completa los campos requeridos");
+                return;
+            }
+        }
+        // If the array does not have 4 items the form isn't completed. So the function exists and data is not stored
+        // If the array have 4 items code continues bellow
 
         let sections = [];
-        for (let i=0; i < document.getElementsByTagName("h2").length; i++){
-            sections.push(document.getElementsByTagName("h2")[i].innerText);
+        for (let k=0; k < document.getElementsByTagName("h2").length; k++){
+            sections.push(document.getElementsByTagName("h2")[k].innerText);
         }
+        // In this array we store the different h2 of the page.
+        //This is necessary because bellow there is a conditional evaluating if the h2 exists with some of the sports values to create it or not
 
         if(!sections.includes(sport)){
+        //Does exist h2 with the value of the sport of the form? If not, code executed follows
 
             let newContent = `${newItem[0]}, ${newItem[1]} años, color de camiseta ${newItem[2]}. ${newItem[3]} años practicando deporte.`;
+            // This is the new content of a new element
 
             let newSection = document.createElement('section');
-            newSection.setAttribute("id", `${sport}`);
             let newHeading = document.createElement("h2");
             let newTextHeading = document.createTextNode(`${sport}`);
+            let newList = document.createElement("ul")
+            newList.setAttribute("id", `${sport}`);
             let newPerson = document.createElement("li");
             let newPersonText = document.createTextNode(newContent);
+            // At this block a new section with the id of the sport is created. Also an h2 with the sport.
+            // A new node that contains the template of line 92
 
             newHeading.appendChild(newTextHeading);
             newSection.appendChild(newHeading);
+            newList.appendChild(newPerson);
             newPerson.appendChild(newPersonText);
-            newSection.appendChild(newPerson);
+            newSection.appendChild(newList);
             document.getElementsByTagName("body")[0].appendChild(newSection);
+            // At this block every element is appended to their fathers. Final one sends all the content to the body.
+            // 92 is appended to li, li appended to ul, ul&h2 to the section
 
         } else {
             let newContent = `${newItem[0]}, ${newItem[1]} años, color de camiseta ${newItem[2]}. ${newItem[3]} años practicando deporte.`;
@@ -84,7 +118,9 @@
             let newPersonText = document.createTextNode(newContent);
             newPerson.appendChild(newPersonText);
             document.getElementById(`${sport}`).appendChild(newPerson);
+            // This code is basically the same but without creating the section and the h2 because the other conditions on the if clause
         }
+
     }
 </script>
 

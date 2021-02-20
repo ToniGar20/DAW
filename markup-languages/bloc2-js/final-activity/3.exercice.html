@@ -21,19 +21,23 @@
 <br>
 <div>
     <img id="the-photo" class="center" src="imgs/bosque-pixabay.jpg" width=300px height=150px style="visibility: hidden">
+    <!-- The photo is inserted but no visible because hidden style-visibility -->
 </div>
 
 <script>
 
     let theImg = document.getElementById("the-photo");
+    // capturing the inserted and not visible photo
 
     function showImg(){
             theImg.style.visibility = "visible";
     }
+    //When click on show the image, visibility changes from hidden to visible
 
     function hideImg(){
             theImg.style.visibility = "hidden";
     }
+    //In the other way, if user clicks hide imagen button, this function applies again the hidden visibility style
 
     function enlargeImg() {
         let currentWidth = theImg.clientWidth;
@@ -46,6 +50,8 @@
             theImg.style.height = currentHeight + 20 + "px";
         }
     }
+    // This function get the width and height of the imagen and applies a plus of px to each dimension.
+    // If the dimensions reach 600x350 then the function returns an alert and image cannot be larger.
 
     function reduceImg(){
         let currentWidth = theImg.clientWidth;
@@ -58,6 +64,8 @@
             theImg.style.height = currentHeight - 20 + "px";
         }
     }
+    // Basically same function than before but substracting px to the current width and height
+    // If the dimensions reach 120x30 then the function returns an alert and image cannot be tinier.
 
 </script>
 
