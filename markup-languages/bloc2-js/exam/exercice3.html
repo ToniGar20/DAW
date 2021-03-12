@@ -2,19 +2,59 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Exercice</title>
-    <style>/**/</style>
+    <title>Exercice3</title>
+    <style>
+        .daw {
+            border: 4px solid blue;
+            color: grey;
+            font-size: 7em;
+        }
+        .redaw{
+            border: 7px solid black;
+            color: red;
+            font-size: 3em;
+        }
+        /* New redaw class added! */
+    </style>
 </head>
 <body>
 
-    <header>...</header>
-    <nav>...</nav>
-    <main>..</main>
-    <article><section>...</section></article>
-    <aside>...</aside>
-    <footer>...</footer>
+    <header>
+        <button onclick="addDaw()">Añade o quita una clase al encabezado</button>
+        <button onclick="addRedaw()">Cambia el estilo del párrafo</button>
+    </header>
+    <!-- In the theaders we have buttons to call the different JS functions to change classes -->
 
-    <script>//</script>
+    <section>
+        <h2>Historia variopinta</h2>
+        <p class="daw">
+            Una vez que bajes del vehículo, observarás varios comercios dentro de la estación de autobuses. No entres, venden muy caro. Sal de la estación, camina tres cuadras hacia el norte, doblas a la izquierda, camina otras tres cuadras y verás una tienda grande, llamada “El puerto del tiburón”. Ahí encontrarás lo que buscas. Y lo que no buscas también.
+        </p>
+    </section>
+    <!-- The p element starts with class "daw" as required -->
+
+    <script>
+        function addDaw(){
+            let myHeading = document.getElementsByTagName("h2")[0]; //capturing h2 (the first and only one)
+            if(myHeading.classList.contains("daw")){
+                myHeading.classList.remove("daw"); // if element have class its removed. If not, its added
+            } else {
+                myHeading.classList.add("daw");
+            }
+        }
+
+        function addRedaw(){
+            let myParagraph = document.getElementsByTagName("p")[0]; // capturing the paragraph
+            if(myParagraph.classList.contains("daw")){
+                myParagraph.classList.remove("daw");
+                myParagraph.classList.add("redaw"); // if the paragraph have daw class, it is removed and it get redaw class
+            } else {
+                myParagraph.classList.remove("redaw"); // same in the opposite order!
+                myParagraph.classList.add("daw");
+            }
+        }
+
+    </script>
 
 </body>
 </html>

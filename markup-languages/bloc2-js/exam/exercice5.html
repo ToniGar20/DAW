@@ -1,20 +1,82 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
-    <title>Exercice</title>
-    <style>/**/</style>
+    <title>Exercice5</title>
+    <style>
+        fieldset {margin: 10px;padding: 10px; border: 10px;}
+        fieldset {display: inline-block; vertical-align: middle; background: #eee;}
+        label {display: block; font-weight: bold; margin: 5px; padding: 5px; border: 5px;}
+        body{background-color: yellow;color: blue}
+        /* Some styles for the page */
+    </style>
 </head>
 <body>
 
-    <header>...</header>
-    <nav>...</nav>
-    <main>..</main>
-    <article><section>...</section></article>
-    <aside>...</aside>
-    <footer>...</footer>
+<header>
+    <h1>Encuesta general para estudiantes</h1>
+</header>
 
-    <script>//</script>
+<main>
+    <p>Contesta a la siguiente encuesta para tener la lista de nuestros estudiantes</p>
+    <form method="post">
+        <fieldset> <legend>Nombre completo</legend>
+            <label>Nombre: <input type="text" id="name" title="Introduce tu nombre"/></label>
+            <label>Primer apellido: <input type="text" id="surname1" title="Introduce tu primer apellido"/></label>
+            <label>Segundo apellido: <input type="text" id="surname2" title="Introduce tu segundo apellido"/></label>
+        </fieldset>
+        <fieldset> <legend>Estudios</legend>
+            <label>Carrera o grado cursado: <input type="text" id="studies-name" title="Carrera o grado"/></label>
+            <label>Fecha de inicio: <input type="date" id="start-date" title="Cuándo empezaste los estudios"/></label>
+            <label>Curso actual: <input type="number" id="course" title="Desde primero a cuarto de carrera"/></label>
+        </fieldset>
+        <fieldset> <legend>Hobbies</legend>
+            <label>Deportes<input type="checkbox" tabindex="1" value="yes"/></label>
+            <label>Viajes<input type="checkbox" tabindex="2" value="yes"/></label>
+            <label>Música<input type="checkbox" tabindex="3" value="yes" /></label>
+            <label>TV<input type="checkbox" tabindex="4" value="yes" /></label>
+        </fieldset>
+        <br>
+        <button type="button" onclick="magic()">Envía el formulario</button>
+    </form>
+
+    <h2>Lista de participantes de la encuesta</h2>
+    <ul id="students-list"></ul>
+
+</main>
+
+
+<script>
+    function magic() {
+
+        let newItem = [];
+        newItem.push(document.getElementById("name").value);
+        newItem.push(document.getElementById("surname1").value);
+        newItem.push(document.getElementById("surname2").value);
+        newItem.push(document.getElementById("studies-name").value);
+        newItem.push(document.getElementById("course").value);
+        // Getting values from the form to create the student to list.
+
+        for(let i=0; i<newItem.length; i++) {
+            if (newItem[i] == null || newItem[i] == "") {
+                alert("Completa los campos requeridos");
+                return;
+            }
+        }
+        //Simple validation. If any value is empty on studies or fullname, it does not allow you to send all.
+
+        let newContent = `${newItem[0]} ${newItem[1]} ${newItem[2]} estudiante de ${newItem[4]} curso de ${newItem[3]}`;
+        // template for generate content to add to the list
+
+        let newStudent = document.createElement("li");
+        // creating list
+        let newStudentText = document.createTextNode(newContent);
+        // creating textnode with variable "newContent"
+        newStudent.appendChild(newStudentText);
+        document.getElementById("students-list").appendChild(newStudent);
+        //last appends to the items on the HTML.
+    }
+</script>
 
 </body>
 </html>

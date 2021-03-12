@@ -2,19 +2,59 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Exercice</title>
-    <style>/**/</style>
+    <title>Exercici1</title>
+    <style>
+        main {
+            width: 100%; height: 90%; text-align: center; background-color: orange; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+        footer {
+            width: 100%; height: 10%; background-color: blue; color: white; font-size: 15px; text-align: center; bottom: 0; position: absolute; left:0;
+        }
+        /* Styles for footer and main content */
+    </style>
 </head>
 <body>
+<button id="content" onclick="addingContent()">Afegeix contingut!</button>
+<!-- Button with id to delete it after use-->
+<main>
+    <div id="main-content">
+    </div>
+</main>
+<!-- Main with id to access it with JS -->
 
-    <header>...</header>
-    <nav>...</nav>
-    <main>..</main>
-    <article><section>...</section></article>
-    <aside>...</aside>
-    <footer>...</footer>
+<footer id="address">
+</footer>
 
-    <script>//</script>
+<!-- Footer with id to access it with JS -->
 
+<script>
+    function addingContent(){
+        let headingText = "Aquest és el títol h1";
+        let paragraphText = "Això és una pregunta de Març de JavaScript";
+        let addressText = "C/Major, Palma";
+        // Variables with the text required
+
+        let newHeadingCreated = document.createElement("h1"); // Creating heading
+        let newHeadingText = document.createTextNode(headingText); // Text node is content variable
+        newHeadingCreated.appendChild(newHeadingText); // Appending text to h1
+        document.getElementById("main-content").appendChild(newHeadingCreated); // Appending entire h1+text to main
+
+
+        let newParagraphCreated = document.createElement("p");
+        let newParagraphText = document.createTextNode(paragraphText);
+        newParagraphCreated.appendChild(newParagraphText);
+        document.getElementById("main-content").appendChild(newParagraphCreated);
+        // Same as the donde before, creating a p.
+
+        let newAddressCreated = document.createElement("p");
+        let newAddressText = document.createTextNode(addressText);
+        newAddressCreated.appendChild(newAddressText);
+        document.getElementById("address").appendChild(newAddressCreated);
+        // In this case we append the new p on the footer
+
+        var theButton = document.getElementById("content");
+        theButton.remove();
+        // The button for adding the content is deleted after using it.
+    }
+</script>
 </body>
 </html>

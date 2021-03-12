@@ -2,19 +2,41 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Exercice</title>
-    <style>/**/</style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice4</title>
 </head>
-<body>
+<body id="content"> <!-- Id for the body-->
+<section>
+    <h2>La grafología</h2>
+    <p>
+        La grafología es una parte de la psicología que estudia al ser humano a través de su escritura, descifrando el carácter a través de los trazos; y también cómo la escritura y por lo tanto el carácter, son afectados por los estados de ánimo, la salud y la enfermedad; en su aspecto más práctico, permite descubrir si dos escrituras o firmas semejantes pertenecen a la misma persona, o si alguna es una falsificación. Para esto, toman en cuenta aspectos como la presión al momento de escribir, la velocidad o la alineación.
+    </p>
+</section>
 
-    <header>...</header>
-    <nav>...</nav>
-    <main>..</main>
-    <article><section>...</section></article>
-    <aside>...</aside>
-    <footer>...</footer>
+<section>
+    <form> <!-- At this form we ask for two colours as required fields -->
+        <fieldset> <legend>Elige los colores para cambiar la página ¡Tienen que estar en inglés!</legend>
+            <label>Color de fondo: <input type="text" id="bcolor" name="color-fondo" title="Introduce un color para el fondo" required/></label>
+            <label>Color de texto: <input type="text" id="tcolor" name="color-texto" title="Introduce un color para el texto" required/></label>
+        </fieldset>
+    </form>
+    <br>
+    <button onclick=magic()>¡Presiona para cambiar los colores!</button>
+    <!-- Button for call the function -->
+</section>
 
-    <script>//</script>
+<script>
+    function magic(){
+        let backgroundColour = document.getElementById("bcolor").value;
+        let textColour = document.getElementById("tcolor").value;
+        // with this two variables we get the inputs information
+
+        document.getElementById("content").style.backgroundColor = backgroundColour;
+        document.getElementById("content").style.color = textColour;
+        // setting varialbes info as new styles to the body, getting it by the id
+    }
+
+</script>
 
 </body>
 </html>

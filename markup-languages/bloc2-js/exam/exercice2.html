@@ -2,19 +2,45 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Exercice</title>
-    <style>/**/</style>
+    <title>Exercice2</title>
 </head>
+
 <body>
 
-    <header>...</header>
-    <nav>...</nav>
-    <main>..</main>
-    <article><section>...</section></article>
-    <aside>...</aside>
-    <footer>...</footer>
+<p>El botón que sigue prueba la primera parte del ejercicio</p>
+<button onclick="magic1()">Juego de textos</button>
+<br>
+<br>
+<br>
+<p>El botón que sigue prueba la segunda parte del ejercicio</p>
+<button onclick="magic2()">Juego de números</button>
 
-    <script>//</script>
+<script>
+    function magic1(){
+        firstText = "one";
+        secondText = "two";
+        while (firstText != secondText){
+            firstText = prompt("Introduce un primer texto");
+            secondText = prompt ("Introduce un segundo texto");
+        };
+        alert("Enhorabuena TUS TEXTOS SON IGUALES! ¡Has encontrado la solución al enigma!")
+    }
+
+    function magic2(){
+        let yourNumber = parseInt(prompt("Introduce un número")); //asking for number
+        if(!yourNumber == "NaN" || !yourNumber == 0 || !yourNumber == " "){ //if for excluding non accepted values
+        confirm("Has escodigo el número " + yourNumber + ". ¿Te parece bien?"); // confirmation
+        let finalResult = 0; //opening a variable
+        for (let i = 0; yourNumber >= i; i++) { //initializing loop for the factorial
+            finalResult += i; // adding
+        }
+        alert("Que sepas que la suma de todos los números que incluye tu número es " + finalResult) //message thats it's ok and result
+    } else {
+            alert("No has introducido un número o has puesto un 0..., la magia ha acabado"); //wrong typing
+            return; //leaving the function.
+        }
+    }
+</script>
 
 </body>
 </html>
