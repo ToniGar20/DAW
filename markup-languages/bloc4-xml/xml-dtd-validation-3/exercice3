@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+ <!DOCTYPE llistaCompra [
+   <!ELEMENT llistaCompra (producte*)
+   <!ELEMENT producte(quantitat, preu)>
+   <!ATTLIST producte ref CDATA #REQUIRED>
+   <!ATTLIST producte fecha CDATA #IMPLIED> 
+   <!ATTLIST producte seccio (alimentacio | drogueria | congelats) #REQUIRED >
+   <!ELEMENT quantitat (#PCDATA)>
+   <!ELEMENT preu (#PCDATA)>
+]>

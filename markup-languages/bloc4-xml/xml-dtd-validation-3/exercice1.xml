@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+ <!DOCTYPE missatges [
+   <!ELEMENT missatges (missatge)>
+   <!ELEMENT missatge (telefono, fecha, hora, titol_missatge,cos_missatge)>
+   <!ELEMENT telefono (#PCDATA)>
+   <!ELEMENT fecha (#PCDATA)>
+   <!ELEMENT hora (#PCDATA)>
+   <!ELEMENT titol_missatge (#PCDATA)>
+   <!ELEMENT cos_missatge (#PCDATA)>
+ ]>
+ 
+ <missatges>
+   <missatge>
+     <telefono>601 601 601</telefono>
+     <fecha>2021/03/30</fecha>
+     <hora>16:27:39</hora>
+     <titol_missatge>Cridam</titol_missatge>
+     <cos_missatge>M'he quedat sense minuts, cridam tú quan puguis</cos_missatge>
+   </missatge>
+ </missatges>

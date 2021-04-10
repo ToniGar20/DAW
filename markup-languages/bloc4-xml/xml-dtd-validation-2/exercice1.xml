@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- Encontrados errores:
+  1- Atributo codi en elemento 1 sin comillas
+  2. Segundo elemento "llibre" empezaba la etiqueta con mayúsculas
+  3. Etiqueta titol del segundo elemento repetida dos veces al cierre
+  4. L'element <sense_catalogar> s'ha de obrir i tancar bé a més de situar-lo a n'es final del element
+  -->
+  <!DOCTYPE biblioteca
+  [
+  <!ELEMENT biblioteca (llibre*)>
+  <!ATTLIST llibre codi ID #REQUIRED>
+  <!ATTLIST llibre any CDATA "2000">
+  <!ELEMENT llibre (titol, idioma, genere, autor, web?, portada?,sense_catalogar?)>
+  <!ELEMENT titol (#PCDATA)>
+  <!ELEMENT idioma (#PCDATA)>
+  <!ELEMENT genere (#PCDATA)>
+  <!ELEMENT autor (#PCDATA)>
+  <!ELEMENT web ANY>
+  <!ELEMENT portada ANY>
+  <!ELEMENT sense_catalogar ANY>
+  ]>
+  
+<biblioteca> 
+   <llibre codi="LL1" any="2002"> 
+      <titol>El instituto</titol> 
+      <idioma>Anglès</idioma> 
+      <genere>suspens</genere> 
+      <autor>Stephen King</autor> 
+      <web>https://www.todostuslibros.com/libros/el-instituto_978-84-01-02235-7</web> 
+      <portada>/imatges/elinstituto.gif</portada> 
+   </llibre>
+   <llibre codi="LL2"> 
+      <titol> La ruta infinita</titol>
+      <idioma>Espanyol</idioma> 
+      <genere>històrica</genere> 
+      <autor>José Calvo Poyato</autor>
+      <sense_catalogar></sense_catalogar> 
+   </llibre> 
+</biblioteca>

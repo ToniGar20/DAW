@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE results [
+   <!ELEMENT results (game*)>
+   <!ELEMENT game (local, local-score,  visitor, visitor-score)>
+   <!ELEMENT local (#PCDATA)>
+   <!ELEMENT visitor (#PCDATA)>
+   <!ELEMENT local-score (#PCDATA)>
+   <!ELEMENT visitor-score (#PCDATA)>
+]>
+
+<results>
+  <game>
+    <local>Real Mallorca</local>
+    <local-score>2</local-score>
+    <visitor>Girona</visitor>
+    <visitor-score>0</visitor-score>
+  </game>
+
+  <game>
+    <local>Sporting de Gijón</local>
+    <local-score>1</local-score>
+    <visitor>Leganés</visitor>
+    <visitor-score>1</visitor-score>
+  </game>
+
+  <game>
+    <local>Espanyol</local>
+    <local-score>1</local-score>
+    <visitor>Real Oviedo</visitor>
+    <visitor-score>2</visitor-score>
+  </game>
+
+</results>

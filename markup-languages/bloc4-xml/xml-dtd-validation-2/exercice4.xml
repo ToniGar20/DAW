@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE lleis [
+  <!ELEMENT lleis (llei)>
+  <!ELEMENT llei (#PCDATA)>
+  
+  <!ENTITY llei1 "Ley Orgánica 3/2018">
+  <!ENTITY  data1 "5 de diciembre">
+  <!ENTITY descripcio1 "Protección de Datos Personales y garantía de los derechos digitales (LOPD-GDD)">
+
+  <!ENTITY llei2 "Ley Orgánica 15/1999">
+  <!ENTITY  descripcio2 "Protección de Datos de Carácter Personal ">
+  
+  <!ENTITY organisme "Cortes Generales de España">
+  <!ENTITY reglament "Reglamento General de Protección de Datos">
+]>
+
+<lleis>
+
+<llei>
+  La &llei1;, de &data1; de  &descripcio1; es una ley orgánica aprobada por las  &organisme; que tiene por objeto adaptar el Derecho interno español al &reglament;. 
+  Esta ley orgánica deroga a la anterior &llei2; de &descripcio2; (aunque se mantiene vigente para la regulación de ciertas actividades).
+</llei>
+</lleis>

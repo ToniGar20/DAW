@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+ <!DOCTYPE llistaCompra [
+   <!ELEMENT llistaCompra (producte*)>
+   <!ELEMENT producte (quantitat, preu)>
+   <!ATTLIST producte ref CDATA #REQUIRED>
+   <!ATTLIST producte fecha CDATA #IMPLIED> 
+   <!ATTLIST producte seccio (alimentacio | drogueria | congelats) #REQUIRED >
+   <!ELEMENT quantitat (#PCDATA)>
+   <!ELEMENT preu (#PCDATA)>
+]>
+
+<llistaCompra>
+
+  <producte ref="champu mango" fecha= "2021-01-28" seccio="drogueria" >
+    <quantitat>1</quantitat>
+    <preu>3,95</preu>  
+  </producte>
+  
+  <producte ref="pomes" fecha= "2021-04-01" seccio="alimentacio" >
+    <quantitat>5</quantitat>
+    <preu>0,30</preu>  
+  </producte>
+  
+  <producte ref="bolsa patates congelades" fecha= "2021-03-15" seccio="congelats" >
+    <quantitat>3</quantitat>
+    <preu>4,15</preu>  
+  </producte>
+
+</llistaCompra>

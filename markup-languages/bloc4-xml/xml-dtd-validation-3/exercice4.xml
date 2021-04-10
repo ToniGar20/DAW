@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE seccio_esportiva [
+ <!ELEMENT seccio_esportiva (esport*)>
+ <!ELEMENT esport (equip, categoria?, poblacio)>
+ <!ATTLIST esport nom NMTOKENS #REQUIRED>
+ <!ATTLIST esport modalitat (individual | grup) #REQUIRED>
+ <!ELEMENT equip (#PCDATA)>
+ <!ATTLIST equip codi ID #REQUIRED>
+ <!ELEMENT categoria (#PCDATA)>
+ <!ELEMENT poblacio (#PCDATA)>
+ <!ATTLIST poblacio pais CDATA #IMPLIED>
+ ]>
+ 
+ <seccio_esportiva>
+ 
+   <esport nom="futbol" modalitat="grup">
+      <equip codi="E01">Amics United</equip>
+      <categoria>1ª</categoria>   
+      <poblacio pais="Portugal">Lisboa</poblacio>
+   </esport>
+   
+    <esport nom="tennis" modalitat="individual">
+      <equip codi="E02">Toni García</equip>
+      <poblacio pais="Espanya">Palma de Mallorca</poblacio>
+   </esport>
+   
+    <esport nom="volleyball" modalitat="grup">
+      <equip codi="E03">Els playeros</equip>
+      <poblacio pais="Brasil">Sao Paulo</poblacio>
+   </esport>   
+   
+ </seccio_esportiva>

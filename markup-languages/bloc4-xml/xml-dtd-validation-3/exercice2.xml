@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE biblioteca [
+  <!ELEMENT biblioteca (llibre*)>
+  <!ELEMENT llibre (titol, editorial, (edicio | ISBN), numero_de_pagines?, autor*)>
+  <!ELEMENT titol (#PCDATA)>
+  <!ELEMENT editorial (#PCDATA)>
+  <!ELEMENT edicio (#PCDATA)>
+  <!ELEMENT ISBN (#PCDATA)>
+  <!ELEMENT numero_de_pagines (#PCDATA)>
+  <!ELEMENT autor (#PCDATA)>
+  <!ATTLIST llibre codi ID #REQUIRED>
+]>
+
+<biblioteca>
+  <llibre codi="L01">
+    <titol>Cien años de soledad</titol>
+    <editorial>Austral</editorial>
+    <ISBN>8559466757-15</ISBN>
+    <autor>Gabriel García Márquez</autor>
+    <autor>Introducción: Joaquín Marco</autor>
+  </llibre>
+  
+  <llibre codi="L02">
+    <titol>El enigma de la habitación 622</titol>
+    <editorial>Alfaguara</editorial>
+    <edicio>1ª</edicio>
+    <numero_de_pagines>618</numero_de_pagines>
+    <autor>Joël Dicker</autor>
+  </llibre>
+
+</biblioteca>

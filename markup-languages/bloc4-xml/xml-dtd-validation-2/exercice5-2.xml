@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE results [
+   <!ELEMENT results (game*)>
+   <!ELEMENT game (local, visitor)>
+   <!ELEMENT local (#PCDATA)>
+   <!ELEMENT visitor (#PCDATA)>
+   <!ATTLIST local name NMTOKENS #REQUIRED>
+   <!ATTLIST visitor name NMTOKENS #REQUIRED>
+]>
+
+<results>
+<game>
+  <local name="Real Mallorca">2</local>
+  <visitor name="Girona">0</visitor>
+</game>
+
+<game>
+  <local name="Sporting de Gijón">1</local>
+  <visitor name="Leganés">1</visitor>
+</game>
+
+<game>
+  <local name="Espanyol">1</local>
+  <visitor name="Real Oviedo">3</visitor>
+</game>
+
+</results>
