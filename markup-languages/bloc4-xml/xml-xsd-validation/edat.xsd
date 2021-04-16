@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="edats"> <!-- Element arrel -->
+    <xs:complexType>
+      <xs:sequence> <!-- Obrim sequence perque si no dona error el xsd -->
+        <xs:element name="edat">
+          <xs:simpleType>
+            <xs:restriction base="xs:integer"> <!-- Restricció de valors només a números -->
+              <xs:minInclusive value="0"/> <!-- mínim -->
+              <xs:maxInclusive value="105"/> <!-- màxim -->
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

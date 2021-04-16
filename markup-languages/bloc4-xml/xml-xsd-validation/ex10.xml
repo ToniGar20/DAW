@@ -1,0 +1,37 @@
+﻿<?xml version="1.0"?> 
+
+<!-- Errors trobats i corregits al XML:
+1. Les dates no estaven en format "date", corregides
+2. Afegida vinculació amb el XSD
+ -->
+
+<institut xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="institut.xsd"> 
+
+   <alumne data_naixement="2005-01-01"> 
+      <dades> 
+         <nom>Harry</nom> 
+         <llinatges>Potter</llinatges> 
+         <dni>411113333</dni> 
+      </dades>
+      <comentaris>Un poc dispers</comentaris> 
+   </alumne> 
+   
+   <alumne data_naixement="1999-02-02"> 
+      <dades> 
+         <nom>Bart</nom> 
+         <llinatges>Simpson</llinatges> 
+         <dni>566565656</dni> 
+      </dades>
+      <comentaris>caòtic</comentaris> 
+   </alumne> 
+   
+   <alumne data_naixement="1975-03-03"> 
+      <dades> 
+         <nom>Darth</nom> 
+         <llinatges>Vader</llinatges> 
+         <dni>100000012</dni> 
+       </dades>
+       <comentaris>Misteriós</comentaris> 
+   </alumne> 
+   
+</institut>

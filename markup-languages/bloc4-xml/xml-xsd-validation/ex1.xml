@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<adrecesInternet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="adrecesInternet.xsd">
+
+   <pagina>
+      <nom>Google</nom>
+      <descripcio>Cercador</descripcio>
+      <url>http://www.google.com/</url>
+   </pagina>
+   
+   <pagina>
+      <nom>Wikipedia</nom>
+      <descripcio>Es baluard</descripcio>
+      <url>http://http://www.esbaluard.org/</url>
+   </pagina>
+   
+   <pagina>
+      <nom>W3C</nom>
+      <descripcio>World Wide Web Consortium.</descripcio>
+      <url>http://www.w3.org/</url>
+   </pagina>
+   
+</adrecesInternet>

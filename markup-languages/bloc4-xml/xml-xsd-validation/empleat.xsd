@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="empleat"> <!-- Element arrel -->
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="nom" type="xs:string"/> <!-- Primer subelement -->
+        <xs:element name="direccio"> <!-- Segon subelement -->
+          <xs:complexType> <!-- El segon subelement te 4 fills que fa que declari tipo complexe i una sequència-->
+            <xs:sequence>
+            <!-- A n'aquest punt, els 4 fills del segon subelement i els seus tipus-->
+              <xs:element name="carrer" type="xs:string"/>
+              <xs:element name="numero" type="xs:integer"/>
+              <xs:element name="ciutat" type="xs:string"/>
+              <xs:element name="provincia" type="xs:string"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="telefono" type="xs:string"/> <!-- Tercer subelement-->
+      </xs:sequence>
+      <xs:attribute name="codi" type="xs:string"/> <!-- Atribut del element arrel que es situa abans de tancar es "complexType"-->
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
+

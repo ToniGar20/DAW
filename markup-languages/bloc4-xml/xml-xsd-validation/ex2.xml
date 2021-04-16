@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+1. Editades les etiquetes de tancament de “data_naixement”
+2. Canviat el format de la data a YYYY-MM-DD
+-->
+
+<persones xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="persones.xsd">
+
+   <persona>
+      <llinatge>Ruíz</llinatge>
+      <edat>36</edat>
+      <data_naixement>1985-10-03</data_naixement>
+   </persona>
+   
+   <persona>
+      <llinatge>Pons</llinatge>
+      <edat>45</edat>
+      <data_naixement>1979-10-03</data_naixement>
+   </persona>
+   
+</persones>

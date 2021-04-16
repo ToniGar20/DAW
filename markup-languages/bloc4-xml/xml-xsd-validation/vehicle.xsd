@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="vehicle"> <!-- Element arrel -->
+    <xs:complexType>
+      <xs:choice>  <!-- Validador dels elements llistats a continuació -->
+      <!-- Aquí apareixen els elements possibles amb el tipos requerit "string "-->
+        <xs:element name="cotxe" type="xs:string"/>
+        <xs:element name="camio" type="xs:string"/>
+        <xs:element name="moto" type="xs:string"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

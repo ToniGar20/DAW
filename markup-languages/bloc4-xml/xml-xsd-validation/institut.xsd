@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+<!-- En primer lloc definesc els dos tipos simples que es requereixen -->
+<!-- "tipus_dni" que es de tipo numeric i amb una extensió de 9 digits -->
+   <xs:simpleType name="tipus_dni">
+      <xs:restriction base="xs:integer">
+        <xs:totalDigits value="9"/>
+      </xs:restriction>
+    </xs:simpleType>
+    
+    <!-- "informacio" que es de tipo string amb una llargaria de entre 5 i 50 caracters-->
+   <xs:simpleType name="informacio">
+      <xs:restriction base="xs:string">
+        <xs:minLength value="5"/>
+        <xs:maxLength value="50"/>
+      </xs:restriction>
+    </xs:simpleType>
+
+<!-- Aquí comença la validació d'elements -->
+  <xs:element name="institut">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="alumne" minOccurs="1" maxOccurs="unbounded"> <!-- Primer i únic element. No es posa màxim d'alumnes per a que es pugui repetir infinites vegades-->
+          <xs:complexType>
+              <xs:sequence>
+              <xs:element name="dades"> <!-- Primer subelement-->
+                <xs:complexType>
+                  <xs:sequence> <!-- Dades conté 3 elements diferents -->
+                    <xs:element name="nom" type="xs:string"/>
+                    <xs:element name="llinatges" type="xs:string"/>
+                    <xs:element name="dni" type="tipus_dni"/> <!-- a dni feim servir la tipologia declarada al principi-->
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="comentaris" type="informacio" minOccurs="0" maxOccurs="1"/> <!-- Per complir que el requisit aparegui o no, posam minim 0 i màxim1-->
+            </xs:sequence>
+          <xs:attribute name="data_naixement" type="xs:date"/>  <!-- Atribut dels elements principals-->
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="pelicula"> <!-- Element arrel -->
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="director" type="xs:string"/> <!-- Primer subelement -->
+        <xs:element name="repartiment"> <!-- Segon subelement -->
+          <xs:complexType> <!-- El segon subelement té fills però son només d'un tipus -->
+            <xs:sequence>
+              <xs:element name="interpret" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>
+              <!-- He definit que els intèrprets es puguin repetir totes les vegades necessàries -->
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="titol" type="xs:string"/> <!-- 1er Atribut del element arrel-->
+      <xs:attribute name="minuts" type="xs:integer"/> <!-- 2n Atribut del element arrel -->
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

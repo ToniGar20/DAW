@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<empleat codi="emp001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:noNamespaceSchemaLocation="empleat.xsd">
+   <nom>Joan Pérez</nom>
+   <direccio>
+      <carrer>Avenida de las flores</carrer>
+      <numero>10</numero>
+      <ciutat>Baeza</ciutat>
+      <provincia>Jaén</provincia>
+    </direccio>
+    <telefono>6768994545</telefono>
+</empleat>
