@@ -5,7 +5,7 @@
 2. Canviat el format de la data a YYYY-MM-DD
 -->
 
-<persones xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="persones.xsd">
+<persones xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ex2-persones.xsd">
 
    <persona>
       <llinatge>Ruíz</llinatge>

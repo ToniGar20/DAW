@@ -1,4 +1,4 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<edats xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="edat.xsd">
+<edats xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ex3-edat.xsd">
     <edat>105</edat>
 </edats>

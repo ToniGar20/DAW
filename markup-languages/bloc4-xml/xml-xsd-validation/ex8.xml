@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<empleat codi="emp001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:noNamespaceSchemaLocation="empleat.xsd">
+<empleat codi="emp001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:noNamespaceSchemaLocation="ex8-empleat.xsd">
    <nom>Joan Pérez</nom>
    <direccio>
       <carrer>Avenida de las flores</carrer>

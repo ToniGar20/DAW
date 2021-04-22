@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<direccions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="direccio.xsd">
+<direccions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ex4-direccio.xsd">
     <direccio>Carrer
             Pérez Galdós 8, 5ºA</direccio>
 </direccions>

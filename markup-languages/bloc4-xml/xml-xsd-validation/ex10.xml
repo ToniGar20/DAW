@@ -5,7 +5,7 @@
 2. Afegida vinculació amb el XSD
  -->
 
-<institut xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="institut.xsd"> 
+<institut xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ex10-institut.xsd">
 
    <alumne data_naixement="2005-01-01"> 
       <dades> 

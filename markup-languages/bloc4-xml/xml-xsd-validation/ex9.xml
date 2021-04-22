@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0"?>
-<pelicula titol="Brazil" minuts="142"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="film.xsd">
+<pelicula titol="Brazil" minuts="142"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ex9-film.xsd">
     <director>Terry Gilliam</director>
     <repartiment>
        <interpret>Jonathan Pryce</interpret>
