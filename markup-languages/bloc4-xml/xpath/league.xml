@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<lliga edicio="1">
+    <descripcio>
+        <nom>Lliga La millor</nom>
+        <edicio>1</edicio>
+        <llista-equips>
+            <club>
+                <nom>Lleons</nom> <entrenador>Bill White</entrenador>
+            </club>
+            <club>
+                <nom>Cavalls</nom> <entrenador>Alfred Gates</entrenador>
+            </club>
+            <club>
+                <nom>Aguiles</nom> <entrenador>Gregori Fernandez</entrenador>
+            </club>
+            <club>
+                <nom>Elefants</nom> <entrenador>Manolo Suau</entrenador>
+            </club>
+        </llista-equips>
+    </descripcio>
+
+    <jornada num="1">
+        <partit num="1">
+            <equip juga="local">
+                <dia>23-12-2019</dia> <nom>Lleons</nom> <resultat>2</resultat>
+                <gols>
+                    <jugador minut="12">Palou</jugador> <jugador minut="60">Palou</jugador>
+                </gols>
+            </equip>
+            <equip juga="visitant">
+                <dia>23-12-2019</dia> <nom>Cavalls</nom> <resultat>0</resultat>
+                <gols />
+            </equip>
+        </partit>
+
+        <partit num="2">
+            <equip juga="local">
+                <dia>25-12-2019</dia> <nom>Aguiles</nom> <resultat>1</resultat>
+                <gols>
+                    <jugador minut="90">Pere Ponce</jugador>
+                </gols>
+            </equip>
+            <equip juga="visitant">
+                <dia>25-12-2019</dia> <nom>Elefants</nom> <resultat>1</resultat>
+                <gols>
+                    <jugador minut="24">Mingo</jugador>
+                </gols>
+            </equip>
+        </partit>
+    </jornada>
+
+    <jornada num="2">
+        <partit num="1">
+            <equip juga="local">
+                <dia>27-12-2019</dia> <nom>Aguiles</nom> <resultat>2</resultat>
+                <gols>
+                    <jugador minut="5">Pere Ponce</jugador> <jugador minut="10">Bryan</jugador>
+                </gols>
+            </equip>
+            <equip juga="visitant">
+                <dia>27-12-2019</dia> <nom>Lleons</nom> <resultat>1</resultat>
+                <gols>
+                    <jugador minut="71">Goriet</jugador>
+                </gols>
+            </equip>
+        </partit>
+
+        <partit num="2">
+            <equip juga="local">
+                <dia>31-12-2019</dia> <nom>Elefants</nom> <resultat>0</resultat>
+                <gols />
+            </equip>
+            <equip juga="visitant">
+                <dia>31-12-2019</dia> <nom>Cavalls</nom> <resultat>4</resultat>
+                <gols>
+                    <jugador minut="25">Fonsi</jugador> <jugador minut="39">Fran</jugador>
+                    <jugador minut="56">Fernandez</jugador> <jugador minut="70">Fran</jugador>
+                </gols>
+            </equip>
+        </partit>
+    </jornada>
+
+    <jornada num="3">
+        <partit num="1">
+            <equip juga="local">
+                <dia>07-01-2020</dia> <nom>Lleons</nom> <resultat>0</resultat>
+                <gols />
+            </equip>
+
+            <equip juga="visitant">
+                <dia>07-01-2020</dia> <nom>Aguiles</nom> <resultat>0</resultat>
+                <gols />
+            </equip>
+        </partit>
+
+        <partit num="2">
+            <equip juga="local">
+                <dia>08-01-2020</dia> <nom>Aguiles</nom> <resultat>1</resultat>
+                <gols>
+                    <jugador minut="33">Pere Ponce</jugador>
+                </gols>
+            </equip>
+            <equip juga="visitant">
+                <dia>08-01-2020</dia> <nom>Cavalls</nom> <resultat>2</resultat>
+                <gols>
+                    <jugador minut="24">Fran</jugador> <jugador minut="60">Fran</jugador>
+                </gols>
+            </equip>
+        </partit>
+    </jornada>
+
+    <jornada num="4">
+        <partit num="1">
+            <equip juga="local">
+                <dia>14-01-2020</dia> <nom>Elefants</nom> <resultat>0</resultat>
+                <gols />
+            </equip>
+            <equip juga="visitant">
+                <dia>14-01-2020</dia> <nom>Lleons</nom> <resultat>1</resultat>
+                <gols>
+                    <jugador minut="89">Palou</jugador>
+                </gols>
+            </equip>
+        </partit>
+
+        <partit num="2">
+            <equip juga="local">
+                <dia>15-01-2020</dia> <nom>Aguiles</nom> <resultat>4</resultat>
+                <gols>
+                    <jugador minut="3">Fran</jugador> <jugador minut="30">Fernandez</jugador>
+                    <jugador minut="51">Fran</jugador> <jugador minut="70">Ernest</jugador>
+                </gols>
+            </equip>
+
+            <equip juga="visitant">
+                <dia>15-01-2020</dia> <nom>Aguiles</nom> <resultat>1</resultat>
+                <gols>
+                    <jugador minut="25">Pere Ponce</jugador>
+                </gols>
+            </equip>
+        </partit>
+    </jornada>
+
+    <jornada num="5">
+        <partit num="1">
+            <equip juga="local">
+                <dia>21-01-2020</dia> <nom>Lleons</nom> <resultat>2</resultat>
+                <gols>
+                    <jugador minut="39">Mario</jugador> <jugador minut="52">Palou</jugador>
+                </gols>
+            </equip>
+            <equip juga="visitant">
+                <dia>21-01-2020</dia> <nom>Aguiles</nom> <resultat>2</resultat>
+                <gols>
+                    <jugador minut="22">Pere >Ponce</jugador> <jugador minut="45">Toni</jugador>
+                </gols>
+            </equip>
+        </partit>
+
+        <partit num="2">
+            <equip juga="local">
+                <dia>23-01-2020</dia> <nom>Cavalls</nom> <resultat>1</resultat>
+                <gols>
+                    <jugador minut="34">Francisco</jugador>
+                </gols>
+            </equip>
+            <equip juga="visitant">
+                <dia>23-01-2020</dia> <nom>Elefants</nom> <resultat>1</resultat>
+                <gols>
+                    <jugador minut="5">Bill</jugador>
+                </gols>
+            </equip>
+        </partit>
+    </jornada>
+
+    <jornada num="6">
+        <partit num="1">
+            <equip juga="local">
+                <dia>27-01-2020</dia> <nom>Aguiles</nom> <resultat>3</resultat>
+                <gols>
+                    <jugador minut="15">Fran</jugador> <jugador minut="85">Fernandez</jugador>
+                    <jugador minut="89">Fran</jugador>
+                </gols>
+            </equip>
+            <equip juga="visitant">
+                <dia>27-01-2020</dia> <nom>Lleons</nom> <resultat>1</resultat>
+                <gols>
+                    <jugador minut="22">Miquel</jugador>
+                </gols>
+            </equip>
+        </partit>
+
+        <partit num="2">
+            <equip juga="local">
+                <dia>27-01-2020</dia> <nom>Elefants</nom> <resultat>0</resultat>
+                <gols />
+            </equip>
+            <equip juga="visitant">
+                <dia>27-01-2020</dia> <nom>Aguiles</nom> <resultat>2</resultat>
+                <gols>
+                    <jugador minut="23">Pere Ponce</jugador> <jugador minut="49">Bremen</jugador>
+                </gols>
+            </equip>
+        </partit>
+    </jornada>
+</lliga>

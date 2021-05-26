@@ -1,0 +1,25 @@
+https://www.freeformatter.com/xpath-tester.html
+
+
+2.1. Quins cicles formatius s'imparteixen a l'institut?
+/curs/cicles/especialitat/cicle/text()
+
+2.2. Quins cicles formatius de grau mitjà hi ha?
+/curs/cicles/especialitat/cicle[@grau="Mitjà"]/text()
+
+2.3. Quins són els noms dels alumnes que han suspès (de tots els cicles)?
+/curs/notes/classe/alumne[@aprovat="NO"]/nom/text()
+
+2.4. Quines dones cursen el cicle d'ASIX?
+/curs/notes/classe[@nom="ASIX"]/alumne[genere="Dona"]/nom/text()
+
+2.5. Quins alumnes suspesos tenen un compte a gmail.com?
+/curs/notes/classe/alumne[@aprovat="NO"][contains(email, "gmail")]/nom/text()
+
+2.6. En quins cicles hi ha alumnes que han tret un 9?
+/curs/notes/classe[alumne/nota="9"]/@nom
+
+2.7. Quin percentatge d'aprovats té el centre?
+round(count(/curs/notes/classe/alumne[@aprovat="SI"]) div count(/curs/notes/classe/alumne) *100)
+
+Nota: es darrer funcionaria també començant amb //alumne per a cada ruta

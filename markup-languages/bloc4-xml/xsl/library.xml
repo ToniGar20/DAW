@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<comanda>
+    <llibreria data="25-11-2019"> "Llibres Balears SA"</llibreria>
+    <llibre quantitat="2">
+        <data>2019-11-30</data>
+        <titol>Les empentes</titol>
+        <autor>Frederik McCloud</autor>
+    </llibre>
+    <llibre quantitat="3">
+        <data>2019-11-28</data>
+        <titol>SIDI</titol>
+        <autor>Arturo Perez-Reverte</autor>
+    </llibre>
+    <llibre quantitat="1">
+        <data>2019-11-21</data>
+        <titol>El club Dumas</titol>
+        <autor>Arturo Perez-Reverte</autor>
+    </llibre>
+    <llibre quantitat="2">
+        <data>2019-11-09</data>
+        <titol>El heredero</titol>
+        <autor>Rafael Tarradas Bulto</autor>
+    </llibre>
+    <llibre quantitat="3">
+        <data>2019-11-28</data>
+        <titol>El corazon helado</titol>
+        <autor>Almudena grandes</autor>
+    </llibre>
+    <llibre quantitat="2">
+        <data>2019-11-25</data>
+        <titol>Ines y la alegria</titol>
+        <autor>Almudena Grandes</autor>
+    </llibre>
+</comanda>

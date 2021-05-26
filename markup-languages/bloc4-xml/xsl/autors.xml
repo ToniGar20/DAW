@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cataleg>
+    <llibre isbn="cod1">
+        <titol>Don Quijote</titol>
+        <autors>
+            <autor naixement="1547">Cervantes</autor>
+        </autors>
+    </llibre>
+    <llibre isbn="cod2">
+        <titol>Antologia</titol>
+        <autors>
+            <autor naixement="1898">Lorca</autor>
+            <autor naixement="1910">Miguel Hernandez</autor>
+        </autors>
+    </llibre>
+    <llibre isbn="cod3">
+        <titol>Cien a�os de soledad</titol>
+        <autors>
+            <autor naixement="1927">Gabriel Garcia Marquez</autor>
+        </autors>
+    </llibre>
+    <llibre isbn="cod5">
+        <titol>Los santos inocentes</titol>
+        <autors>
+            <autor naixement="1920">Miguel Delibes</autor>
+        </autors>
+    </llibre>
+    <llibre isbn="cod6">
+        <titol>La sombra del viento</titol>
+        <autors>
+            <autor naixement="1964">Carlos Luis Zafon</autor>
+        </autors>
+    </llibre>
+</cataleg>

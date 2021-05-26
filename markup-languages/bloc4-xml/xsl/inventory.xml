@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inventari>
+    <producte codi="Ord">
+        <pes unitat="grams">780</pes>
+        <nom>Ordinador portàtil Lenovo Lavie Z</nom>
+        <lloc planta="Baixa">
+            <despatx>Direcció</despatx>
+        </lloc>
+    </producte>
+    <producte codi="Impr">
+        <pes unitat="grams">1500</pes>
+        <nom>Impressora Làser HP</nom>
+        <lloc planta="Baixa">
+            <despatx>Direcció</despatx>
+        </lloc>
+    </producte>
+    <producte codi="Impr">
+        <pes unitat="grams">1700</pes>
+        <nom>Impressora Injecció de tinta HP</nom>
+        <lloc planta="Primera">
+            <despatx>Administració</despatx>
+        </lloc>
+    </producte>
+    <producte codi="Ord">
+        <pes unitat="grams">1100</pes>
+        <nom>Ordinador portàtil HP</nom>
+        <lloc planta="Primera">
+            <despatx>Administració</despatx>
+        </lloc>
+    </producte>
+    <producte codi="Ord">
+        <pes unitat="grams">3200</pes>
+        <nom>Ordinador sobretaula ACER</nom>
+        <lloc planta="Primera">
+            <despatx>Administració</despatx>
+        </lloc>
+    </producte>
+</inventari>

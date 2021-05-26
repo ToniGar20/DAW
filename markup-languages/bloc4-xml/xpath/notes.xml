@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<curs>
+    <cicles>
+        <especialitat nom="Informàtica">
+            <cicle id="ASIX" grau="Superior">Administració de Sistemes Informàtics i Xarxes</cicle>
+            <cicle id="SMX" grau="Mitjà">Sistemes Microinformàtics i Xarxes</cicle>
+        </especialitat>
+        <especialitat nom="Electricitat">
+            <cicle id="IEA" grau="Mitjà">Instal·lacions elèctriques i automàtiques</cicle>
+        </especialitat>
+    </cicles>
+    <notes>
+        <classe nom="SMX">
+            <alumne aprovat="SI">
+                <nom>Ninotchka</nom> <nota>7</nota> <email>garbo@hotmail.com</email> <genere>Dona</genere>
+            </alumne>
+            <alumne aprovat="NO">
+                <nom>Vito Corleoner</nom> <email>vito@gmail.com</email> <genere>Home</genere>
+            </alumne>
+            <alumne aprovat="SI">
+                <nom>Tony Montana</nom> <nota>6</nota> <email>montana@gmail.com</email> <genere>Home</genere>
+            </alumne>
+            <alumne aprovat="SI">
+                <nom>James Bond</nom> <nota>5</nota> <email>bonds@hotmail.com</email> <genere>Home</genere>
+            </alumne>
+            <alumne aprovat="NO">
+                <nom>Norma Desmond</nom> <nota>4</nota> <email>glorial@hotmail.com</email> <genere>Dona</genere>
+            </alumne>
+        </classe>
+        <classe nom="ASIX">
+            <alumne aprovat="SI">
+                <nom>Indiana Jonese</nom> <email>indi@gmail.com</email> <genere>Home</genere>
+            </alumne>
+            <alumne aprovat="SI">
+                <nom>Gelsomina</nom> <nota>6</nota> <email>massinaa@gmail.com</email> <genere>Dona</genere>
+            </alumne>
+            <alumne aprovat="SI">
+                <nom>Sam Spade</nom> <nota>6</nota> <email>bogar@xmail.com</email> <genere>Home</genere>
+            </alumne>
+            <alumne aprovat="NO">
+                <nom>Rocky Balboa</nom> <nota>3</nota> <email>rockyo@gmail.com</email> <genere>Home</genere>
+            </alumne>
+            <alumne aprovat="SI">
+                <nom>Tony Manero</nom> <nota>9</nota> <email>travolta@hotmail.com</email> <genere>Home</genere>
+            </alumne>
+            <alumne aprovat="NO">
+                <nom>Mary Poppins</nom> <email>poppins@gmail.com</email> <genere>Dona</genere>
+            </alumne>
+            <alumne aprovat="SI">
+                <nom>Jake Gittes</nom> <nota>5</nota> <email>nicholson@gmail.com</email> <genere>Home</genere>
+            </alumne>
+            <alumne aprovat="SI">
+                <nom>Jill McBain</nom> <email>cardinalle@hotmail.com</email> <genere>Dona</genere>
+            </alumne>
+            <alumne aprovat="SI">
+                <nom>Darth Vader</nom> <nota>9</nota> <email>darth@gmail.com</email> <genere>Home</genere>
+            </alumne>
+        </classe>
+        <classe nom="IEA">
+            <alumne aprovat="SI">
+                <nom>Escarlata O'Hara</nom> <nota>5</nota> <email>escarlata@hotmail.com</email> <genere>Dona</genere>
+            </alumne>
+            <alumne aprovat="NO">
+                <nom>Norman Bates</nom> <nota>5</nota> <email>norman@hotmail.com</email> <genere>Home</genere>
+            </alumne>
+            <alumne aprovat="NO">
+                <nom>Dorothy</nom> <nota>4</nota> <email>oz@gmail.com</email> <genere>Dona</genere>
+            </alumne>
+            <alumne aprovat="SI">
+                <nom>Charles Foster Kane</nom> <nota>5</nota> <email>kane@gmail.com</email> <genere>Home</genere>
+            </alumne>
+            <alumne aprovat="NO">
+                <nom>Jim Stark</nom> <nota>2</nota> <email>jamesdean@gmail.com</email> <genere>Home</genere>
+            </alumne>
+        </classe>
+    </notes>
+</curs>

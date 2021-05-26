@@ -1,0 +1,32 @@
+https://www.freeformatter.com/xpath-tester.html
+
+
+2.1) Quants partits han jugat els "Lleons"?
+count(/lliga/jornada/partit/equip[nom="Lleons"])
+
+2.2) Quins partits han jugat a casa els "Elefants"?
+count(/lliga/jornada/partit/equip[@juga="local"][nom="Elefants"])
+
+2.3) Quants jugadors han marcat gols abans de la mitja part (minut 45) jugant com a locals?
+count(/lliga/jornada/partit/equip[@juga="local"]/gols/jugador[@minut<=45])
+
+2.4) Quants partits en els quals jugaven els "Elefants" han quedat empatats?
+count(/lliga/jornada/partit[equip/nom="Elefants"][equip[@juga="local"]/resultat=equip[@juga="visitant"]/resultat])
+
+2.5) En quines jornades els"Lleons" han jugat a casa?
+/lliga/jornada[partit/equip[@juga="local"]/nom="Lleons"]/@num
+
+2.6) Quina és la mitjana de gols per partit dels "Cavalls"?
+round(avg(/lliga/jornada/partit/equip[nom="Lleons"]/resultat/text()),2)
+
+2.7) Trobar la suma total de tots els resultats. Per exemple, resultat dia 1 és 3, resultat dia 5 és 1, la suma serà 4.
+concat(sum(/lliga/jornada/partit/equip[@juga="local"]/resultat/text()), "-", sum(/lliga/jornada/partit/equip[@juga="visitant"]/resultat/text()))
+
+2.8) Llista els jugadors que han fet gols a tots els partits
+distinct-values(/lliga/jornada/partit/equip/gols//jugador/text())
+
+2.9) Llista els jugadors que han fet gols el dia 25-12-2019
+/lliga/jornada/partit/equip[dia="25-12-2019"]/gols//jugador/text()
+
+2.10) Mostra una llista de cada dia on el partit hagi acabat amb un resultat major que 2.
+distinct-values(/lliga/jornada/partit/equip[resultat>2]/dia/text())
